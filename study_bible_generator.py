@@ -1135,6 +1135,6 @@ def build_all():
     return html
 
 if __name__ == "__main__":
-    with open("study_bible.html", "w", encoding="utf-8") as f:
+    with open("index.html", "w", encoding="utf-8") as f:
         f.write(build_all())
     print("SUCCESS: Generated massive First Principles ecosystem (Modular Build!)")
