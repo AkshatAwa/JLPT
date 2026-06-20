@@ -1,0 +1,2304 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JLPT N5 Essential Adverbs, Particles & Expressions Cheat Sheet</title>
+  <meta name="description" content="Ultimate JLPT N5 Cheat Sheet for Essential Adverbs, Particles, and Expressions. Interactive revision guide and printable exam cheat sheet.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="theme-sakura slideshow-mode">
+
+  <!-- Navigation & Controls Header (Hidden in Print) -->
+  <header class="app-header no-print" id="appHeader">
+    <div class="logo-area">
+      <div class="nihongo-badge">N5</div>
+      <div>
+        <h1 class="logo-title">日本語 N5 Cheat Sheet</h1>
+        <p class="logo-subtitle">Adverbs, Particles & Expressions</p>
+      </div>
+    </div>
+
+    <!-- Central Search & Filters -->
+    <div class="search-container">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" id="vocabSearch" placeholder="Search words, romaji, meanings..." autocomplete="off">
+      <button id="clearSearch" class="clear-search-btn" title="Clear Search">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- Controls Menu -->
+    <div class="control-actions">
+      <!-- Theme Selector -->
+      <div class="theme-selector-container">
+        <button class="control-btn" id="themeBtn" title="Change Theme">
+          <i data-lucide="palette"></i>
+          <span class="btn-text">Theme</span>
+        </button>
+        <div class="theme-dropdown" id="themeDropdown">
+          <button class="theme-option active" data-theme="sakura">
+            <span class="theme-dot sakura-dot"></span> Sakura 🌸
+          </button>
+          <button class="theme-option" data-theme="matcha">
+            <span class="theme-dot matcha-dot"></span> Matcha 🍵
+          </button>
+          <button class="theme-option" data-theme="fuji">
+            <span class="theme-dot fuji-dot"></span> Fuji Indigo 🌊
+          </button>
+          <button class="theme-option" data-theme="sumi">
+            <span class="theme-dot sumi-dot"></span> Sumi Charcoal 🖤
+          </button>
+        </div>
+      </div>
+
+      <!-- Mode Switcher -->
+      <button class="control-btn toggle-mode-btn" id="modeToggleBtn" title="Switch View Mode">
+        <i data-lucide="book-open" id="modeIcon"></i>
+        <span class="btn-text" id="modeText">Print Guide Mode</span>
+      </button>
+
+      <!-- Print/PDF Button -->
+      <button class="control-btn print-btn" id="printBtn" title="Print / Save to PDF">
+        <i data-lucide="printer"></i>
+        <span class="btn-text">PDF Export</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Quick Section Jump Menu -->
+  <div class="nav-sections no-print" id="navSections">
+    <button class="jump-btn" data-target="1"><i data-lucide="home"></i> Home</button>
+    <button class="jump-btn" data-target="3"><i data-lucide="clock"></i> Adverbs</button>
+    <button class="jump-btn" data-target="14"><i data-lucide="book"></i> Grammar</button>
+    <button class="jump-btn" data-target="22"><i data-lucide="message-circle"></i> Expressions</button>
+    <button class="jump-btn" data-target="23"><i data-lucide="hash"></i> Particles</button>
+    <button class="jump-btn" data-target="24"><i data-lucide="alert-triangle"></i> Traps</button>
+    <button class="jump-btn" data-target="25"><i data-lucide="star"></i> Final Review</button>
+  </div>
+
+  <!-- Interactive Slide Progress Tracker (Hidden in PDF/Print Mode) -->
+  <div class="slide-progress-bar no-print" id="progressBarContainer">
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="slide-indicator">
+      <button class="nav-arrow" id="prevSlideBtn" title="Previous Slide (Left Arrow)">
+        <i data-lucide="chevron-left"></i>
+      </button>
+      <span class="slide-counter">Slide <strong id="currentSlideNum">1</strong> of <strong id="totalSlidesNum">15</strong></span>
+      <button class="nav-arrow" id="nextSlideBtn" title="Next Slide (Right Arrow)">
+        <i data-lucide="chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Presentation Container -->
+  <main class="presentation-container" id="presentationContainer">
+
+    <!-- SLIDE 1: TITLE SLIDE -->
+    <section class="slide active-slide" id="slide-1" data-slide-index="1">
+      <div class="slide-art-accent-left"></div>
+      <div class="slide-art-accent-right"></div>
+      
+      <div class="title-slide-content">
+        <div class="japanese-crest-svg">
+          <svg viewBox="0 0 100 100" class="crest-svg">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2,2"/>
+            <path d="M 50 10 A 40 40 0 0 0 50 90 A 40 40 0 0 0 50 10" fill="currentColor" opacity="0.08"/>
+            <circle cx="50" cy="50" r="18" fill="currentColor" class="crest-center"/>
+          </svg>
+        </div>
+        <div class="exam-badge">JLPT N5 EXAM STUDY KIT</div>
+        <h1 class="main-title">Essential Adverbs, Particles &amp; Expressions</h1>
+        <p class="main-subtitle">The Complete Revision &amp; Exam Cheat Sheet</p>
+        <div class="title-divider"></div>
+        <p class="author-credits">Designed for Japanese Language Proficiency Test Beginners</p>
+        
+        <div class="title-footer-tips no-print">
+          <div class="tip-card-simple">
+            <i data-lucide="keyboard" class="tip-icon"></i>
+            <span>Use Left &amp; Right Arrow keys to navigate slides</span>
+          </div>
+          <div class="tip-card-simple">
+            <i data-lucide="file-text" class="tip-icon"></i>
+            <span>Switch to <strong>Print Guide Mode</strong> at the top to print or export as PDF!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: HOW TO USE THIS GUIDE -->
+    <section class="slide" id="slide-2" data-slide-index="2">
+      <div class="slide-header">
+        <div class="slide-badge">Guide</div>
+        <h2>How to Use This Revision Guide</h2>
+      </div>
+      <div class="slide-body">
+        <div class="intro-grid">
+          <div class="intro-card main-intro">
+            <h3>Why these words matter</h3>
+            <p>Adverbs, particles, and simple connecting words form the "connective tissue" of Japanese sentences. While nouns and verbs provide the core topic, these words dictate <strong>when</strong>, <strong>how often</strong>, <strong>to what degree</strong>, and <strong>in what direction</strong> actions take place.</p>
+            <p class="highlight-box">💡 <strong>Exam Insight:</strong> JLPT N5 grammar and listening questions frequently hinge on understanding these exact vocabulary items. Missing a single adverb like まだ (not yet) or しか (only) can completely flip the meaning of a sentence!</p>
+          </div>
+          
+          <div class="intro-card-features">
+            <div class="feature-item">
+              <div class="feature-icon-wrapper"><i data-lucide="table"></i></div>
+              <div class="feature-info">
+                <h4>Grammar Tables</h4>
+                <p>Every category is laid out in high-contrast grids featuring Japanese script, Romaji, English definitions, and contextual usage.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-wrapper"><i data-lucide="alert-triangle"></i></div>
+              <div class="feature-info">
+                <h4>Exam Trap Alerts</h4>
+                <p>Crucial grammar pairings (like negatives) and frequently confused doublets are isolated and highlighted for review.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-wrapper"><i data-lucide="smile"></i></div>
+              <div class="feature-info">
+                <h4>Memory Aids &amp; Tricks</h4>
+                <p>Simple mnemonics, structured formulas, and comparative visual structures are integrated directly into tables.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-infographic">
+          <div class="infographic-step">
+            <span class="step-num">01</span>
+            <h5>Review Slideshow</h5>
+            <p>Go slide-by-slide to study each theme individually.</p>
+          </div>
+          <div class="infographic-divider"></div>
+          <div class="infographic-step">
+            <span class="step-num">02</span>
+            <h5>Toggle Print Mode</h5>
+            <p>Expand all tables and view as a single scrolling study guide.</p>
+          </div>
+          <div class="infographic-divider"></div>
+          <div class="infographic-step">
+            <span class="step-num">03</span>
+            <h5>Print to PDF</h5>
+            <p>Save as a high-quality physical document for desk study.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: TIME ADVERBS -->
+    <section class="slide" id="slide-3" data-slide-index="3">
+      <div class="slide-header">
+        <div class="slide-badge">01 / Adverbs</div>
+        <h2>Time Adverbs (時間副詞)</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">Time adverbs specify when an action occurs, its immediacy, or its state of completion.</p>
+        
+        <div class="table-container">
+          <table class="vocab-table" id="table-time-adverbs">
+            <thead>
+              <tr>
+                <th style="width: 15%">Japanese</th>
+                <th style="width: 15%">Romaji</th>
+                <th style="width: 20%">English</th>
+                <th style="width: 30%">Example Sentence</th>
+                <th style="width: 20%">Memory Aid / Trap</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vocab-row">
+                <td class="jp-col">もう</td>
+                <td class="romaji-col">mou</td>
+                <td class="meaning-col"><span class="badge badge-pos">already</span> / <span class="badge badge-neg">anymore (+ negative)</span></td>
+                <td class="example-col">
+                  <div><strong>もう</strong>昼ご飯を食べました。</div>
+                  <div class="translation">I have <strong>already</strong> eaten lunch.</div>
+                </td>
+                <td class="mnemonic-col">Sounds like "Moo!" - The cow has <strong>already</strong> eaten grass.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">まだ</td>
+                <td class="romaji-col">mada</td>
+                <td class="meaning-col"><span class="badge badge-neg">not yet (+ negative)</span> / <span class="badge badge-pos">still</span></td>
+                <td class="example-col">
+                  <div>宿題は<strong>まだ</strong>終わっていません。</div>
+                  <div class="translation">My homework is <strong>not yet</strong> finished.</div>
+                </td>
+                <td class="mnemonic-col">Sounds like "Madder" - My teacher gets <strong>madder</strong> because I am <strong>not yet</strong> done.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">もうすぐ</td>
+                <td class="romaji-col">mousugu</td>
+                <td class="meaning-col">soon / shortly</td>
+                <td class="example-col">
+                  <div><strong>もうすぐ</strong>電車が来ます。</div>
+                  <div class="translation">The train will come <strong>soon</strong>.</div>
+                </td>
+                <td class="mnemonic-col">"Mou" (already) + "sugu" (immediately) = Coming <strong>very soon</strong>.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">すぐ / すぐに</td>
+                <td class="romaji-col">sugu / sugu ni</td>
+                <td class="meaning-col">immediately / right away</td>
+                <td class="example-col">
+                  <div><strong>すぐ</strong>に行きます！</div>
+                  <div class="translation">I will go <strong>immediately</strong>!</div>
+                </td>
+                <td class="mnemonic-col">Think: "Soon-goo". Do it <strong>immediately</strong>, no delay!</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">さっき</td>
+                <td class="romaji-col">sakki</td>
+                <td class="meaning-col">a while ago / just now</td>
+                <td class="example-col">
+                  <div><strong>さっき</strong>田中さんに会いました。</div>
+                  <div class="translation">I met Mr. Tanaka <strong>a while ago</strong>.</div>
+                </td>
+                <td class="mnemonic-col">"Sakki" refers to a very recent past (minutes or hours ago).</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">あとで</td>
+                <td class="romaji-col">ato de</td>
+                <td class="meaning-col">later / afterwards</td>
+                <td class="example-col">
+                  <div><strong>あとで</strong>電話をします。</div>
+                  <div class="translation">I will call you <strong>later</strong>.</div>
+                </td>
+                <td class="mnemonic-col">"Ato" means behind/after. "Ato de" = <strong>later on</strong>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: FREQUENCY WORDS -->
+    <section class="slide" id="slide-4" data-slide-index="4">
+      <div class="slide-header">
+        <div class="slide-badge">02 / Frequency</div>
+        <h2>Frequency Words (頻度副詞)</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">Frequency adverbs range from 100% (always) to 0% (never). Note which ones strictly require negative verb forms!</p>
+        
+        <div class="table-container">
+          <table class="vocab-table" id="table-frequency">
+            <thead>
+              <tr>
+                <th style="width: 15%">Japanese</th>
+                <th style="width: 15%">Romaji</th>
+                <th style="width: 20%">Frequency &amp; Meaning</th>
+                <th style="width: 30%">Example Sentence</th>
+                <th style="width: 20%">Grammar Requirement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vocab-row">
+                <td class="jp-col">いつも</td>
+                <td class="romaji-col">itsumo</td>
+                <td class="meaning-col"><span class="freq-meter freq-100">100%</span> always</td>
+                <td class="example-col">
+                  <div>朝は<strong>いつも</strong>コーヒーを飲みます。</div>
+                  <div class="translation">I <strong>always</strong> drink coffee in the morning.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-pos">Positive Verbs</span></td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">よく</td>
+                <td class="romaji-col">yoku</td>
+                <td class="meaning-col"><span class="freq-meter freq-80">80%</span> often / well</td>
+                <td class="example-col">
+                  <div>日本のアニメを<strong>よく</strong>見ます。</div>
+                  <div class="translation">I <strong>often</strong> watch Japanese anime.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-pos">Positive Verbs</span></td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">ときどき</td>
+                <td class="romaji-col">tokidoki</td>
+                <td class="meaning-col"><span class="freq-meter freq-50">50%</span> sometimes</td>
+                <td class="example-col">
+                  <div><strong>ときどき</strong>図書館で勉強します。</div>
+                  <div class="translation">I <strong>sometimes</strong> study at the library.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-pos">Positive Verbs</span><br>Repeat symbol (々) means "doki-doki" double.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">たいてい</td>
+                <td class="romaji-col">taitei</td>
+                <td class="meaning-col"><span class="freq-meter freq-70">70%</span> usually / mostly</td>
+                <td class="example-col">
+                  <div>日曜日は<strong>たいてい</strong>家にいます。</div>
+                  <div class="translation">On Sundays, I am <strong>usually</strong> at home.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-pos">Positive Verbs</span></td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">あまり</td>
+                <td class="romaji-col">amari</td>
+                <td class="meaning-col"><span class="freq-meter freq-20">20%</span> not very / not much</td>
+                <td class="example-col">
+                  <div>私はお酒を<strong>あまり</strong>飲みません。</div>
+                  <div class="translation">I do <strong>not</strong> drink alcohol <strong>very much</strong>.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-danger">MUST use Negative</span><br>Amari + Neg = "Not very..."</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">ぜんぜん</td>
+                <td class="romaji-col">zenzen</td>
+                <td class="meaning-col"><span class="freq-meter freq-0">0%</span> not at all / never</td>
+                <td class="example-col">
+                  <div>英語が<strong>ぜんぜん</strong>わかりません。</div>
+                  <div class="translation">I do <strong>not</strong> understand English <strong>at all</strong>.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-danger">MUST use Negative</span><br>Zenzen + Neg = "Not at all..."</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: DEGREE WORDS -->
+    <section class="slide" id="slide-5" data-slide-index="5">
+      <div class="slide-header">
+        <div class="slide-badge">03 / Degree</div>
+        <h2>Degree Words (程度副詞)</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">Degree words modify adjectives or verbs to specify intensity or comparison level.</p>
+        
+        <div class="table-container">
+          <table class="vocab-table" id="table-degree">
+            <thead>
+              <tr>
+                <th style="width: 15%">Japanese</th>
+                <th style="width: 15%">Romaji</th>
+                <th style="width: 20%">English Meaning</th>
+                <th style="width: 30%">Example Sentence</th>
+                <th style="width: 20%">Context Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vocab-row">
+                <td class="jp-col">とても</td>
+                <td class="romaji-col">totemo</td>
+                <td class="meaning-col">very</td>
+                <td class="example-col">
+                  <div>このラーメンは<strong>とても</strong>美味しいです。</div>
+                  <div class="translation">This ramen is <strong>very</strong> delicious.</div>
+                </td>
+                <td class="mnemonic-col">Standard way to say "very". Works with positive adjectives.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">たいへん</td>
+                <td class="romaji-col">taihen</td>
+                <td class="meaning-col">very / awfully / tough</td>
+                <td class="example-col">
+                  <div>日本語の文法は<strong>たいへん</strong>難しいです。</div>
+                  <div class="translation">Japanese grammar is <strong>extremely/very</strong> difficult.</div>
+                </td>
+                <td class="mnemonic-col">More formal/written than とても. Also means "tough situation".</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">すこし</td>
+                <td class="romaji-col">sukoshi</td>
+                <td class="meaning-col">a little / slightly</td>
+                <td class="example-col">
+                  <div>日本語が<strong>すこし</strong>話せます。</div>
+                  <div class="translation">I can speak a <strong>little</strong> Japanese.</div>
+                </td>
+                <td class="mnemonic-col">Polite/written version of "a little".</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">ちょっと</td>
+                <td class="romaji-col">chotto</td>
+                <td class="meaning-col">a bit / just a moment</td>
+                <td class="example-col">
+                  <div><strong>ちょっと</strong>待ってください。</div>
+                  <div class="translation">Please wait <strong>a moment/little bit</strong>.</div>
+                </td>
+                <td class="mnemonic-col">More casual. Used frequently to politely decline requests.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">もっと</td>
+                <td class="romaji-col">motto</td>
+                <td class="meaning-col">more</td>
+                <td class="example-col">
+                  <div><strong>もっと</strong>ゆっくり話してください。</div>
+                  <div class="translation">Please speak <strong>more</strong> slowly.</div>
+                </td>
+                <td class="mnemonic-col">Think: "Give me <strong>more</strong>, like a motto".</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">いちばん</td>
+                <td class="romaji-col">ichiban</td>
+                <td class="meaning-col">most / number one</td>
+                <td class="example-col">
+                  <div>くだものの中でりんごが<strong>いちばん</strong>好きです。</div>
+                  <div class="translation">Among fruits, I like apples the <strong>most</strong>.</div>
+                </td>
+                <td class="mnemonic-col">"Ichi" (one) + "ban" (number) = Best / Most.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: COMPARISON WORDS -->
+    <section class="slide" id="slide-6" data-slide-index="6">
+      <div class="slide-header">
+        <div class="slide-badge">04 / Comparison</div>
+        <h2>Comparison Words (比較表現)</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">Essential structures for comparing things in Japanese. Focus on the word order and particle roles!</p>
+        
+        <div class="comparison-rules-grid">
+          <div class="rule-card">
+            <h3>Formula 1: Direct Comparison</h3>
+            <div class="formula-box">
+              <span class="formula-element">A</span> <span class="formula-particle">より</span> 
+              <span class="formula-element">B</span> <span class="formula-particle">のほうが</span> 
+              <span class="formula-adj">[Adjective]</span> です。
+            </div>
+            <p class="formula-explanation"><strong>Meaning:</strong> B is more [Adjective] than A.</p>
+            <div class="example-mini">
+              <div>猫<strong>より</strong>犬<strong>のほうが</strong>好きです。</div>
+              <div class="translation">I like dogs more than cats. (Dogs > Cats)</div>
+            </div>
+          </div>
+          
+          <div class="rule-card">
+            <h3>Formula 2: Asking Preferences</h3>
+            <div class="formula-box">
+              <span class="formula-element">A</span> <span class="formula-particle">と</span> 
+              <span class="formula-element">B</span> <span class="formula-particle">とどちらが</span> 
+              <span class="formula-adj">[Adjective]</span> ですか。
+            </div>
+            <p class="formula-explanation"><strong>Meaning:</strong> Between A and B, which one is more [Adjective]?</p>
+            <div class="example-mini">
+              <div>肉<strong>と</strong>魚<strong>とどちらが</strong>好きですか。</div>
+              <div class="translation">Between meat and fish, which do you prefer?</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-container" style="margin-top: 1.5rem;">
+          <table class="vocab-table" id="table-comparison">
+            <thead>
+              <tr>
+                <th style="width: 15%">Japanese</th>
+                <th style="width: 15%">Romaji</th>
+                <th style="width: 20%">English Meaning</th>
+                <th style="width: 30%">Usage Example</th>
+                <th style="width: 20%">Core Concept</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vocab-row">
+                <td class="jp-col">より</td>
+                <td class="romaji-col">yori</td>
+                <td class="meaning-col">than</td>
+                <td class="example-col">
+                  <div>東京は京都<strong>より</strong>大きいです。</div>
+                  <div class="translation">Tokyo is bigger <strong>than</strong> Kyoto.</div>
+                </td>
+                <td class="mnemonic-col">Acts as the starting point benchmark (than X).</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">ほうが</td>
+                <td class="romaji-col">hou ga</td>
+                <td class="meaning-col">more (preferred option)</td>
+                <td class="example-col">
+                  <div>こちらの<strong>ほうが</strong>安いです。</div>
+                  <div class="translation">This side is <strong>more</strong> cheap (cheaper).</div>
+                </td>
+                <td class="mnemonic-col">"Hou" means direction/alternative. B's direction is better.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">おなじ</td>
+                <td class="romaji-col">onaji</td>
+                <td class="meaning-col">same</td>
+                <td class="example-col">
+                  <div>彼と<strong>おなじ</strong>時計を買いました。</div>
+                  <div class="translation">I bought the <strong>same</strong> watch as him.</div>
+                </td>
+                <td class="mnemonic-col">Shows equivalence. Usually takes "to" (same as: A とおなじ).</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">いちばん</td>
+                <td class="romaji-col">ichiban</td>
+                <td class="meaning-col">most / number one</td>
+                <td class="example-col">
+                  <div>日本で富士山が<strong>いちばん</strong>高いです。</div>
+                  <div class="translation">Mount Fuji is the <strong>most</strong> high (highest) in Japan.</div>
+                </td>
+                <td class="mnemonic-col">Used to express superlative (the absolute most).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: QUANTITY WORDS -->
+    <section class="slide" id="slide-7" data-slide-index="7">
+      <div class="slide-header">
+        <div class="slide-badge">05 / Quantity</div>
+        <h2>Quantity Words (数量表現)</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">These words limit, approximate, or define quantities. Look out for the positive vs. negative grammar restrictions!</p>
+        
+        <div class="table-container">
+          <table class="vocab-table" id="table-quantity">
+            <thead>
+              <tr>
+                <th style="width: 15%">Japanese</th>
+                <th style="width: 15%">Romaji</th>
+                <th style="width: 20%">Meaning</th>
+                <th style="width: 30%">Example Sentence</th>
+                <th style="width: 20%">Grammar Rules</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vocab-row">
+                <td class="jp-col">ぐらい / くらい</td>
+                <td class="romaji-col">gurai / kurai</td>
+                <td class="meaning-col">approx. (duration/amount)</td>
+                <td class="example-col">
+                  <div>１時間<strong>ぐらい</strong>泳ぎました。</div>
+                  <div class="translation">I swam for <strong>about</strong> 1 hour.</div>
+                </td>
+                <td class="mnemonic-col">Used for duration, distance, money, and volumes.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">ごろ</td>
+                <td class="romaji-col">goro</td>
+                <td class="meaning-col">approx. (point in time)</td>
+                <td class="example-col">
+                  <div>３時<strong>ごろ</strong>に駅で会いましょう。</div>
+                  <div class="translation">Let's meet at the station <strong>around</strong> 3 o'clock.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-warning">Specific Points</span><br>Cannot be used for durations.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">だけ</td>
+                <td class="romaji-col">dake</td>
+                <td class="meaning-col">only / just</td>
+                <td class="example-col">
+                  <div>ひらがな<strong>だけ</strong>書けます。</div>
+                  <div class="translation">I can write <strong>only</strong> Hiragana.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-pos">Positive Verbs</span><br>Simple limits.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">しか</td>
+                <td class="romaji-col">shika</td>
+                <td class="meaning-col">only (nothing else)</td>
+                <td class="example-col">
+                  <div>財布に100円<strong>しか</strong>ありません。</div>
+                  <div class="translation">I have <strong>only</strong> 100 yen (nothing else) in my wallet.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-danger">MUST use Negative</span><br>Adds a feeling of insufficiency.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">ぜんぶ</td>
+                <td class="romaji-col">zenbu</td>
+                <td class="meaning-col">all / everything</td>
+                <td class="example-col">
+                  <div>宿題は<strong>ぜんぶ</strong>終わりました。</div>
+                  <div class="translation">My homework is <strong>all</strong> finished.</div>
+                </td>
+                <td class="mnemonic-col">"Zen" (all) + "bu" (parts) = Everything.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">みんな</td>
+                <td class="romaji-col">minna</td>
+                <td class="meaning-col">everyone / all (people/things)</td>
+                <td class="example-col">
+                  <div><strong>みんな</strong>で歌いましょう。</div>
+                  <div class="translation">Let's sing <strong>all together</strong>.</div>
+                </td>
+                <td class="mnemonic-col">Usually refers to people, but can mean entire group sets.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: QUESTION WORDS -->
+    <section class="slide" id="slide-8" data-slide-index="8">
+      <div class="slide-header">
+        <div class="slide-badge">06 / Questions</div>
+        <h2>Question Words (疑問詞)</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">Essential question words to seek information in JLPT N5 listening and reading scripts.</p>
+        
+        <div class="table-container">
+          <table class="vocab-table" id="table-questions">
+            <thead>
+              <tr>
+                <th style="width: 15%">Japanese</th>
+                <th style="width: 15%">Romaji</th>
+                <th style="width: 15%">English</th>
+                <th style="width: 35%">Example Sentence</th>
+                <th style="width: 20%">Common Combination</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vocab-row">
+                <td class="jp-col">なに / なん</td>
+                <td class="romaji-col">nani / nan</td>
+                <td class="meaning-col">what</td>
+                <td class="example-col">
+                  <div>これは<strong>なん</strong>ですか。</div>
+                  <div class="translation"><strong>What</strong> is this?</div>
+                </td>
+                <td class="mnemonic-col"><strong>なにを</strong> (What [obj]) / <strong>何曜日</strong> (What day)</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">だれ</td>
+                <td class="romaji-col">dare</td>
+                <td class="meaning-col">who</td>
+                <td class="example-col">
+                  <div>あの人は<strong>だれ</strong>ですか。</div>
+                  <div class="translation"><strong>Who</strong> is that person?</div>
+                </td>
+                <td class="mnemonic-col"><strong>だれと</strong> (With whom) / <strong>だれの</strong> (Whose)</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">どこ</td>
+                <td class="romaji-col">doko</td>
+                <td class="meaning-col">where</td>
+                <td class="example-col">
+                  <div>お手洗いは<strong>どこ</strong>ですか。</div>
+                  <div class="translation"><strong>Where</strong> is the restroom?</div>
+                </td>
+                <td class="mnemonic-col"><strong>どこに</strong> (Where at) / <strong>どこから</strong> (Where from)</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">いつ</td>
+                <td class="romaji-col">itsu</td>
+                <td class="meaning-col">when</td>
+                <td class="example-col">
+                  <div>テストは<strong>いつ</strong>ですか。</div>
+                  <div class="translation"><strong>When</strong> is the test?</div>
+                </td>
+                <td class="mnemonic-col">Does NOT require the time particle "ni" directly.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">なぜ</td>
+                <td class="romaji-col">naze</td>
+                <td class="meaning-col">why</td>
+                <td class="example-col">
+                  <div><strong>なぜ</strong>遅れましたか。</div>
+                  <div class="translation"><strong>Why</strong> are you late? (Polite/Formal)</div>
+                </td>
+                <td class="mnemonic-col">More formal than どうして. Used in written exams.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">どうして</td>
+                <td class="romaji-col">doushite</td>
+                <td class="meaning-col">why / how come</td>
+                <td class="example-col">
+                  <div><strong>どうして</strong>学校を休みましたか。</div>
+                  <div class="translation"><strong>Why</strong> did you skip school?</div>
+                </td>
+                <td class="mnemonic-col">Frequently used in N5 conversations.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">どう</td>
+                <td class="romaji-col">dou</td>
+                <td class="meaning-col">how</td>
+                <td class="example-col">
+                  <div>日本語の勉強は<strong>どう</strong>ですか。</div>
+                  <div class="translation"><strong>How</strong> is studying Japanese?</div>
+                </td>
+                <td class="mnemonic-col"><strong>どうやって</strong> (How/By what method)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: NANI & DARE SERIES -->
+    <section class="slide" id="slide-9" data-slide-index="9">
+      <div class="slide-header">
+        <div class="slide-badge">07 / Indefinite</div>
+        <h2>Nani-Series &amp; Dare-Series (不定代名詞)</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">By adding か (indefinite) or も (inclusive/negative), basic question words turn into key expressions.</p>
+        
+        <div class="formula-banner">
+          <div class="banner-part">
+            <span class="formula-term">Question Word + か</span> &rarr; <span class="formula-result">"Some-..."</span> (Positive verb)
+          </div>
+          <div class="banner-divider"></div>
+          <div class="banner-part font-red">
+            <span class="formula-term">Question Word + も</span> &rarr; <span class="formula-result">"No-..."</span> (Negative verb only)
+          </div>
+        </div>
+
+        <div class="table-container" style="margin-top: 1rem;">
+          <table class="vocab-table" id="table-series">
+            <thead>
+              <tr>
+                <th style="width: 15%">Japanese</th>
+                <th style="width: 15%">Romaji</th>
+                <th style="width: 20%">Meaning</th>
+                <th style="width: 30%">Example Sentence</th>
+                <th style="width: 20%">Grammar Check</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vocab-row">
+                <td class="jp-col">なにか</td>
+                <td class="romaji-col">nanika</td>
+                <td class="meaning-col">something</td>
+                <td class="example-col">
+                  <div>カバンの中に<strong>なにか</strong>ありますか。</div>
+                  <div class="translation">Is there <strong>something</strong> inside the bag?</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-pos">Positive Verbs</span></td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">なにも</td>
+                <td class="romaji-col">nanimo</td>
+                <td class="meaning-col">nothing</td>
+                <td class="example-col">
+                  <div>冷蔵庫には<strong>なにも</strong>ありません。</div>
+                  <div class="translation">There is <strong>nothing</strong> in the refrigerator.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-danger">MUST use Negative</span></td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">だれか</td>
+                <td class="romaji-col">dareka</td>
+                <td class="meaning-col">someone</td>
+                <td class="example-col">
+                  <div>教室に<strong>だれか</strong>いますか。</div>
+                  <div class="translation">Is <strong>someone</strong> in the classroom?</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-pos">Positive Verbs</span></td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">だれも</td>
+                <td class="romaji-col">daremo</td>
+                <td class="meaning-col">no one / nobody</td>
+                <td class="example-col">
+                  <div>部屋には<strong>だれも</strong>いません。</div>
+                  <div class="translation">There is <strong>no one</strong> in the room.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-danger">MUST use Negative</span></td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">どこか</td>
+                <td class="romaji-col">dokoka</td>
+                <td class="meaning-col">somewhere</td>
+                <td class="example-col">
+                  <div>週末に<strong>どこか</strong>へ行きましたか。</div>
+                  <div class="translation">Did you go <strong>somewhere</strong> over the weekend?</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-pos">Positive Verbs</span></td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">どこも</td>
+                <td class="romaji-col">dokomo</td>
+                <td class="meaning-col">nowhere</td>
+                <td class="example-col">
+                  <div>昨日は<strong>どこも</strong>行きませんでした。</div>
+                  <div class="translation">I went <strong>nowhere</strong> (didn't go anywhere) yesterday.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-danger">MUST use Negative</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 10: CONNECTING WORDS -->
+    <section class="slide" id="slide-10" data-slide-index="10">
+      <div class="slide-header">
+        <div class="slide-badge">08 / Connectors</div>
+        <h2>Connecting Words (接続詞)</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">Connectors bridge sentences, indicate causality, or introduce contrasting ideas.</p>
+        
+        <div class="table-container">
+          <table class="vocab-table" id="table-connectors">
+            <thead>
+              <tr>
+                <th style="width: 15%">Japanese</th>
+                <th style="width: 15%">Romaji</th>
+                <th style="width: 20%">Function &amp; Meaning</th>
+                <th style="width: 30%">Example Sentence</th>
+                <th style="width: 20%">Grammar Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vocab-row">
+                <td class="jp-col">そして</td>
+                <td class="romaji-col">soshite</td>
+                <td class="meaning-col">and / then</td>
+                <td class="example-col">
+                  <div>朝起きました。<strong>そして</strong>顔を洗いました。</div>
+                  <div class="translation">I woke up in the morning. <strong>And then</strong> washed my face.</div>
+                </td>
+                <td class="mnemonic-col">Links sentences chronologically or details additions.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">それから</td>
+                <td class="romaji-col">sorekara</td>
+                <td class="meaning-col">and then / after that</td>
+                <td class="example-col">
+                  <div>宿題をして、<strong>それから</strong>テレビを見ました。</div>
+                  <div class="translation">I did my homework, <strong>and after that</strong> watched TV.</div>
+                </td>
+                <td class="mnemonic-col">"Sore" (that) + "kara" (from) = From that point onwards.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">だから</td>
+                <td class="romaji-col">dakara</td>
+                <td class="meaning-col">therefore / so</td>
+                <td class="example-col">
+                  <div>雨が降っています。<strong>だから</strong>傘を持ちます。</div>
+                  <div class="translation">It is raining. <strong>Therefore</strong>, I carry an umbrella.</div>
+                </td>
+                <td class="mnemonic-col">Introduces results caused by the preceding sentence.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">でも</td>
+                <td class="romaji-col">demo</td>
+                <td class="meaning-col">but / however</td>
+                <td class="example-col">
+                  <div>旅行に行きたいです。<strong>でも</strong>お金がありません。</div>
+                  <div class="translation">I want to go on a trip. <strong>But</strong> I have no money.</div>
+                </td>
+                <td class="mnemonic-col">Starts a sentence to introduce contrast. (Conversational)</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">しかし</td>
+                <td class="romaji-col">shikashi</td>
+                <td class="meaning-col">however / but</td>
+                <td class="example-col">
+                  <div>努力しました。<strong>しかし</strong>負けました。</div>
+                  <div class="translation">I made an effort. <strong>However</strong>, I lost.</div>
+                </td>
+                <td class="mnemonic-col">Formal/written contrast. Very common in N5 reading sections.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">が</td>
+                <td class="romaji-col">ga</td>
+                <td class="meaning-col">but / although</td>
+                <td class="example-col">
+                  <div>薬を飲みました<strong>が</strong>、熱が下がりません。</div>
+                  <div class="translation">I took medicine <strong>but</strong> my fever won't go down.</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-warning">Sentence Mid-Connector</span><br>Glues two clauses together directly.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 11: LOCATION & DIRECTION WORDS -->
+    <section class="slide" id="slide-11" data-slide-index="11">
+      <div class="slide-header">
+        <div class="slide-badge">09 / Proximity</div>
+        <h2>Location &amp; Direction Words (これ・それ・あれ)</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">The legendary "Ko-So-A-Do" matrix. Understanding proximity is key to answering N5 visual maps and audio exams.</p>
+        
+        <div class="kosado-grid">
+          <!-- KO -->
+          <div class="kosado-card ko-card">
+            <div class="card-head">
+              <h3>これ / ここ / こちら</h3>
+              <span class="badge badge-ko">Ko-Series</span>
+            </div>
+            <p class="relation-info">🏠 **Close to Speaker**</p>
+            <table class="card-table">
+              <tr><td>ここ (koko)</td><td>Here</td></tr>
+              <tr><td>こちら (kochira)</td><td>This way (polite)</td></tr>
+            </table>
+            <p class="card-ex">「<strong>ここ</strong>は私の教室です」 (Here is my classroom.)</p>
+          </div>
+
+          <!-- SO -->
+          <div class="kosado-card so-card">
+            <div class="card-head">
+              <h3>それ / そこ / そちら</h3>
+              <span class="badge badge-so">So-Series</span>
+            </div>
+            <p class="relation-info">👥 **Close to Listener**</p>
+            <table class="card-table">
+              <tr><td>そこ (soko)</td><td>There</td></tr>
+              <tr><td>そちら (sochira)</td><td>That way (polite)</td></tr>
+            </table>
+            <p class="card-ex">「<strong>そこ</strong>に辞書があります」 (There is a dictionary near you.)</p>
+          </div>
+
+          <!-- A -->
+          <div class="kosado-card a-card">
+            <div class="card-head">
+              <h3>あれ / あそこ / あちら</h3>
+              <span class="badge badge-a">A-Series</span>
+            </div>
+            <p class="relation-info">🌳 **Far from Both**</p>
+            <table class="card-table">
+              <tr><td>あそこ (asoko)</td><td>Over there</td></tr>
+              <tr><td>あちら (achira)</td><td>Way over there</td></tr>
+            </table>
+            <p class="card-ex">「トイレは<strong>あそこ</strong>です」 (Restroom is over there.)</p>
+          </div>
+
+          <!-- DO -->
+          <div class="kosado-card do-card">
+            <div class="card-head">
+              <h3>どれ / どちら / どこ</h3>
+              <span class="badge badge-do">Do-Series</span>
+            </div>
+            <p class="relation-info">❓ **Question / Choice**</p>
+            <table class="card-table">
+              <tr><td>どこ (doko)</td><td>Where</td></tr>
+              <tr><td>どちら (dochira)</td><td>Which way / Who</td></tr>
+            </table>
+            <p class="card-ex">「駅は<strong>どちら</strong>ですか」 (Which way is the station?)</p>
+          </div>
+        </div>
+
+        <div class="table-container" style="margin-top: 1.5rem;">
+          <table class="vocab-table" id="table-location">
+            <thead>
+              <tr>
+                <th style="width: 15%">Japanese</th>
+                <th style="width: 15%">Romaji</th>
+                <th style="width: 20%">Meaning</th>
+                <th style="width: 30%">Example Sentence</th>
+                <th style="width: 20%">Politeness Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vocab-row">
+                <td class="jp-col">ここ / そこ / あそこ</td>
+                <td class="romaji-col">koko / soko / asoko</td>
+                <td class="meaning-col">here / there / over there</td>
+                <td class="example-col">
+                  <div>郵便局は<strong>あそこ</strong>にあります。</div>
+                  <div class="translation">The post office is <strong>over there</strong>.</div>
+                </td>
+                <td class="mnemonic-col">Standard physical location indicators.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">こちら / そちら / あちら</td>
+                <td class="romaji-col">kochira / sochira / achira</td>
+                <td class="meaning-col">this way / that way / over there</td>
+                <td class="example-col">
+                  <div><strong>こちら</strong>へどうぞ。</div>
+                  <div class="translation">Please come <strong>this way</strong>.</div>
+                </td>
+                <td class="mnemonic-col">Polite directions. Can also introduce people (e.g. This is Mr. X).</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">どちら</td>
+                <td class="romaji-col">dochira</td>
+                <td class="meaning-col">which way / which one</td>
+                <td class="example-col">
+                  <div>お国は<strong>どちら</strong>ですか。</div>
+                  <div class="translation"><strong>Which</strong> country are you from? (Polite)</div>
+                </td>
+                <td class="mnemonic-col">Polite form of どこ (where) or どれ (which one). Choice of two.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 12: HIGH-FREQUENCY JLPT N5 ADVERBS -->
+    <section class="slide" id="slide-12" data-slide-index="12">
+      <div class="slide-header">
+        <div class="slide-badge">10 / Core Adverbs</div>
+        <h2>High-Frequency JLPT N5 Adverbs (必須一般副詞)</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">These general adverbs describe quality of actions, probability, or subjective desires.</p>
+        
+        <div class="table-container">
+          <table class="vocab-table" id="table-highfreq-adverbs">
+            <thead>
+              <tr>
+                <th style="width: 15%">Japanese</th>
+                <th style="width: 15%">Romaji</th>
+                <th style="width: 20%">English Meaning</th>
+                <th style="width: 30%">Example Sentence</th>
+                <th style="width: 20%">Exam Hint &amp; Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vocab-row">
+                <td class="jp-col">だんだん</td>
+                <td class="romaji-col">dandan</td>
+                <td class="meaning-col">gradually / step-by-step</td>
+                <td class="example-col">
+                  <div>暖かくなって、<strong>だんだん</strong>春になります。</div>
+                  <div class="translation">It's getting warmer; it is <strong>gradually</strong> becoming spring.</div>
+                </td>
+                <td class="mnemonic-col">Like walking down a flight of steps: Dan-dan. Used with change verbs.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">ゆっくり</td>
+                <td class="romaji-col">yukkuri</td>
+                <td class="meaning-col">slowly / at ease</td>
+                <td class="example-col">
+                  <div>週末は家で<strong>ゆっくり</strong>休みたい。</div>
+                  <div class="translation">I want to rest <strong>leisurely</strong> at home on the weekend.</div>
+                </td>
+                <td class="mnemonic-col">Do not confuse with "fast". Represents relaxation or low speed.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">はやく</td>
+                <td class="romaji-col">hayaku</td>
+                <td class="meaning-col">quickly / early</td>
+                <td class="example-col">
+                  <div>明日<strong>はやく</strong>起きなければなりません。</div>
+                  <div class="translation">I must wake up <strong>early</strong> tomorrow.</div>
+                </td>
+                <td class="mnemonic-col">Can mean early (早く) or fast (速く) depending on kanji context.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">いっしょに</td>
+                <td class="romaji-col">issho ni</td>
+                <td class="meaning-col">together</td>
+                <td class="example-col">
+                  <div><strong>いっしょに</strong>ご飯を食べませんか。</div>
+                  <div class="translation">Won't we eat dinner <strong>together</strong>?</div>
+                </td>
+                <td class="mnemonic-col">Frequently paired with ~mashou (let's) or ~masen ka (won't we?).</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">たぶん</td>
+                <td class="romaji-col">tabun</td>
+                <td class="meaning-col">probably / perhaps</td>
+                <td class="example-col">
+                  <div>明日は<strong>たぶん</strong>雨でしょう。</div>
+                  <div class="translation">Tomorrow it will <strong>probably</strong> rain.</div>
+                </td>
+                <td class="mnemonic-col">Often pairs with ~deshou or ~to omoimasu (I think...). Shows ~70% guess.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">ぜひ</td>
+                <td class="romaji-col">zehi</td>
+                <td class="meaning-col">by all means / definitely</td>
+                <td class="example-col">
+                  <div>日本へ<strong>ぜひ</strong>行きたいです。</div>
+                  <div class="translation">I <strong>definitely</strong> want to go to Japan.</div>
+                </td>
+                <td class="mnemonic-col">Pairs with ~tai (want to do) or ~てください (please do). Strong desire.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">なかなか</td>
+                <td class="romaji-col">nakanaka</td>
+                <td class="meaning-col">not easily / not readily</td>
+                <td class="example-col">
+                  <div>バスが<strong>なかなか</strong>来ません。</div>
+                  <div class="translation">The bus is <strong>not easily</strong> coming (taking a very long time).</div>
+                </td>
+                <td class="mnemonic-col"><span class="badge badge-danger">MUST use Negative</span><br>Indicates delay or difficulty in completion.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">もちろん</td>
+                <td class="romaji-col">mochiron</td>
+                <td class="meaning-col">of course / naturally</td>
+                <td class="example-col">
+                  <div><strong>もちろん</strong>宿題をやりましたよ。</div>
+                  <div class="translation"><strong>Of course</strong> I did my homework!</div>
+                </td>
+                <td class="mnemonic-col">Indicates obvious truth or permission.</td>
+              </tr>
+              <tr class="vocab-row">
+                <td class="jp-col">ほんとうに</td>
+                <td class="romaji-col">hontou ni</td>
+                <td class="meaning-col">really / truly</td>
+                <td class="example-col">
+                  <div>今日は<strong>ほんとうに</strong>寒いです。</div>
+                  <div class="translation">Today is <strong>really</strong> cold.</div>
+                </td>
+                <td class="mnemonic-col">Emphasizes truth. From "hontou" (truth).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 13: TOP 30 MOST IMPORTANT N5 WORDS -->
+    <section class="slide" id="slide-13" data-slide-index="13">
+      <div class="slide-header">
+        <div class="slide-badge">11 / Memory Table</div>
+        <h2>Top 30 Most Important N5 Words</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">The high-priority core vocabulary for passing the N5. Use this for quick memorization checkpoints.</p>
+        
+        <div class="split-tables-container">
+          <!-- Col 1 -->
+          <div class="table-half">
+            <table class="vocab-table compact-table" id="table-top30-part1">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Japanese</th>
+                  <th>Romaji</th>
+                  <th>English</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="vocab-row"><td>1</td><td class="jp-col">もう</td><td class="romaji-col">mou</td><td class="meaning-col">already</td></tr>
+                <tr class="vocab-row"><td>2</td><td class="jp-col">まだ</td><td class="romaji-col">mada</td><td class="meaning-col">not yet</td></tr>
+                <tr class="vocab-row"><td>3</td><td class="jp-col">すぐ</td><td class="romaji-col">sugu</td><td class="meaning-col">immediately</td></tr>
+                <tr class="vocab-row"><td>4</td><td class="jp-col">あとで</td><td class="romaji-col">ato de</td><td class="meaning-col">later</td></tr>
+                <tr class="vocab-row"><td>5</td><td class="jp-col">いつも</td><td class="romaji-col">itsumo</td><td class="meaning-col">always</td></tr>
+                <tr class="vocab-row"><td>6</td><td class="jp-col">よく</td><td class="romaji-col">yoku</td><td class="meaning-col">often / well</td></tr>
+                <tr class="vocab-row"><td>7</td><td class="jp-col">ときどき</td><td class="romaji-col">tokidoki</td><td class="meaning-col">sometimes</td></tr>
+                <tr class="vocab-row"><td>8</td><td class="jp-col">あまり</td><td class="romaji-col">amari</td><td class="meaning-col">not very (+ negative)</td></tr>
+                <tr class="vocab-row"><td>9</td><td class="jp-col">ぜんぜん</td><td class="romaji-col">zenzen</td><td class="meaning-col">not at all (+ negative)</td></tr>
+                <tr class="vocab-row"><td>10</td><td class="jp-col">とても</td><td class="romaji-col">totemo</td><td class="meaning-col">very</td></tr>
+                <tr class="vocab-row"><td>11</td><td class="jp-col">すこし</td><td class="romaji-col">sukoshi</td><td class="meaning-col">a little</td></tr>
+                <tr class="vocab-row"><td>12</td><td class="jp-col">ちょっと</td><td class="romaji-col">chotto</td><td class="meaning-col">a bit / moment</td></tr>
+                <tr class="vocab-row"><td>13</td><td class="jp-col">いちばん</td><td class="romaji-col">ichiban</td><td class="meaning-col">most / number one</td></tr>
+                <tr class="vocab-row"><td>14</td><td class="jp-col">より</td><td class="romaji-col">yori</td><td class="meaning-col">than</td></tr>
+                <tr class="vocab-row"><td>15</td><td class="jp-col">ほうが</td><td class="romaji-col">hou ga</td><td class="meaning-col">more (preferred)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="table-half">
+            <table class="vocab-table compact-table" id="table-top30-part2">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Japanese</th>
+                  <th>Romaji</th>
+                  <th>English</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="vocab-row"><td>16</td><td class="jp-col">ぐらい</td><td class="romaji-col">gurai</td><td class="meaning-col">about (duration)</td></tr>
+                <tr class="vocab-row"><td>17</td><td class="jp-col">ごろ</td><td class="romaji-col">goro</td><td class="meaning-col">around (point in time)</td></tr>
+                <tr class="vocab-row"><td>18</td><td class="jp-col">だけ</td><td class="romaji-col">dake</td><td class="meaning-col">only / just</td></tr>
+                <tr class="vocab-row"><td>19</td><td class="jp-col">しか</td><td class="romaji-col">shika</td><td class="meaning-col">only (nothing else + neg)</td></tr>
+                <tr class="vocab-row"><td>20</td><td class="jp-col">だれか</td><td class="romaji-col">dareka</td><td class="meaning-col">someone</td></tr>
+                <tr class="vocab-row"><td>21</td><td class="jp-col">なにも</td><td class="romaji-col">nanimo</td><td class="meaning-col">nothing (+ negative)</td></tr>
+                <tr class="vocab-row"><td>22</td><td class="jp-col">そして</td><td class="romaji-col">soshite</td><td class="meaning-col">and / then</td></tr>
+                <tr class="vocab-row"><td>23</td><td class="jp-col">だから</td><td class="romaji-col">dakara</td><td class="meaning-col">therefore / so</td></tr>
+                <tr class="vocab-row"><td>24</td><td class="jp-col">でも</td><td class="romaji-col">demo</td><td class="meaning-col">but / however</td></tr>
+                <tr class="vocab-row"><td>25</td><td class="jp-col">ここ</td><td class="romaji-col">koko</td><td class="meaning-col">here</td></tr>
+                <tr class="vocab-row"><td>26</td><td class="jp-col">どちら</td><td class="romaji-col">dochira</td><td class="meaning-col">which direction / one</td></tr>
+                <tr class="vocab-row"><td>27</td><td class="jp-col">ゆっくり</td><td class="romaji-col">yukkuri</td><td class="meaning-col">slowly</td></tr>
+                <tr class="vocab-row"><td>28</td><td class="jp-col">いっしょに</td><td class="romaji-col">issho ni</td><td class="meaning-col">together</td></tr>
+                <tr class="vocab-row"><td>29</td><td class="jp-col">ぜひ</td><td class="romaji-col">zehi</td><td class="meaning-col">by all means</td></tr>
+                <tr class="vocab-row"><td>30</td><td class="jp-col">ほんとうに</td><td class="romaji-col">hontou ni</td><td class="meaning-col">really</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 14: COMMON EXAM TRAPS -->
+    <section class="slide" id="slide-14" data-slide-index="14">
+      <div class="slide-header">
+        <div class="slide-badge">12 / Warning</div>
+        <h2>Common Exam Traps (試験の罠)</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">Beware of these five tricky pairings that JLPT examiners frequently use to try and catch you out!</p>
+        
+        <div class="traps-grid">
+          <!-- Trap 1 -->
+          <div class="trap-card">
+            <div class="trap-card-header">
+              <i data-lucide="alert-circle" class="trap-icon"></i>
+              <h4>ぐらい vs ごろ (About vs. Around)</h4>
+            </div>
+            <div class="trap-comparison">
+              <div class="comp-col">
+                <span class="word-highlight">ぐらい (gurai)</span>
+                <p class="desc"><strong>Duration / Quantity:</strong> Used with time spans, money, distances.</p>
+                <p class="ex">３時間<strong>ぐらい</strong>勉強した。<br><span class="translation">Studied for about 3 hours.</span></p>
+              </div>
+              <div class="comp-col border-left">
+                <span class="word-highlight">ごろ (goro)</span>
+                <p class="desc"><strong>Point in time:</strong> Used with specific clock times, months, years.</p>
+                <p class="ex">３時<strong>ごろ</strong>に起きる。<br><span class="translation">Wake up around 3 o'clock.</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trap 2 -->
+          <div class="trap-card">
+            <div class="trap-card-header">
+              <i data-lucide="alert-circle" class="trap-icon"></i>
+              <h4>もう vs まだ (Already vs. Not Yet)</h4>
+            </div>
+            <div class="trap-comparison">
+              <div class="comp-col">
+                <span class="word-highlight">もう (mou)</span>
+                <p class="desc">Action is completed. Frequently used with past tense verbs.</p>
+                <p class="ex"><strong>もう</strong>食べました。<br><span class="translation">I have already eaten.</span></p>
+              </div>
+              <div class="comp-col border-left">
+                <span class="word-highlight">まだ (mada)</span>
+                <p class="desc">Action is uncompleted. Strictly used with negative verbs (~te inai).</p>
+                <p class="ex"><strong>まだ</strong>食べていません。<br><span class="translation">I haven't eaten yet.</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trap 3 -->
+          <div class="trap-card">
+            <div class="trap-card-header">
+              <i data-lucide="alert-circle" class="trap-icon"></i>
+              <h4>より vs ほうが (Comparative Roles)</h4>
+            </div>
+            <div class="trap-comparison flex-row">
+              <p class="full-width">Remember the core balance formula: <span class="formula-span">A より B のほうが...</span></p>
+              <div class="comp-col-split text-center">
+                <strong>[A] より = Less preferred marker</strong><br>
+                <span>"Compared to A..."</span>
+              </div>
+              <div class="comp-col-split text-center border-left">
+                <strong>[B] ほうが = More preferred option</strong><br>
+                <span>"B is more..."</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trap 4 -->
+          <div class="trap-card">
+            <div class="trap-card-header">
+              <i data-lucide="alert-circle" class="trap-icon"></i>
+              <h4>Negative Verbs Requirement (あまり / ぜんぜん)</h4>
+            </div>
+            <div class="trap-explanation">
+              <p>Adverbs like <strong>あまり (not very)</strong>, <strong>ぜんぜん (not at all)</strong>, and <strong>なかなか (not easily)</strong> MUST be followed by negative verbs.</p>
+              <div class="warning-formula">
+                <span class="danger-formula-part">あまり / ぜんぜん / なかなか</span> + <span class="danger-formula-verb">[Negative Verb] (〜ない / 〜ません)</span>
+              </div>
+              <div class="ok-ng-grid">
+                <div class="ng-box">❌ ぜんぜん分かります (Incorrect)</div>
+                <div class="ok-box">✅ ぜんぜん分かりません (Correct - "I don't understand at all")</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 15: FINAL REVISION SHEET (FULL SPREADSHEET TABLE) -->
+    <section class="slide" id="slide-15" data-slide-index="15">
+      <div class="slide-header">
+        <div class="slide-badge">13 / Revision Sheet</div>
+        <h2>Final Master Cheat Sheet</h2>
+      </div>
+      <div class="slide-body">
+        <p class="slide-desc">A comprehensive summary of all essential JLPT N5 adverbs, particles, and expressions for rapid revision prior to entering the exam room.</p>
+        
+        <div class="table-container master-table-container">
+          <table class="vocab-table master-vocab-table" id="master-revision-table">
+            <thead>
+              <tr>
+                <th style="width: 15%">Category</th>
+                <th style="width: 15%">Japanese</th>
+                <th style="width: 15%">Romaji</th>
+                <th style="width: 25%">English Meaning</th>
+                <th style="width: 30%">Key Usage / Exam Tip</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Time -->
+              <tr class="vocab-row" data-cat="time">
+                <td><span class="cat-pill pill-time">Time</span></td>
+                <td class="jp-col">もう</td>
+                <td class="romaji-col">mou</td>
+                <td class="meaning-col">already / anymore</td>
+                <td>Already (positive) / Anymore (negative). Often triggers past tense.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="time">
+                <td><span class="cat-pill pill-time">Time</span></td>
+                <td class="jp-col">まだ</td>
+                <td class="romaji-col">mada</td>
+                <td class="meaning-col">not yet / still</td>
+                <td>Not yet (used with negative verb form: まだ〜ていません).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="time">
+                <td><span class="cat-pill pill-time">Time</span></td>
+                <td class="jp-col">もうすぐ</td>
+                <td class="romaji-col">mousugu</td>
+                <td class="meaning-col">soon / shortly</td>
+                <td>Refers to an action that will happen shortly in the future.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="time">
+                <td><span class="cat-pill pill-time">Time</span></td>
+                <td class="jp-col">すぐ</td>
+                <td class="romaji-col">sugu</td>
+                <td class="meaning-col">immediately</td>
+                <td>Requires immediate action without delay.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="time">
+                <td><span class="cat-pill pill-time">Time</span></td>
+                <td class="jp-col">さっき</td>
+                <td class="romaji-col">sakki</td>
+                <td class="meaning-col">a while ago</td>
+                <td>Refers to moments ago in the past.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="time">
+                <td><span class="cat-pill pill-time">Time</span></td>
+                <td class="jp-col">あとで</td>
+                <td class="romaji-col">ato de</td>
+                <td class="meaning-col">later</td>
+                <td>After a certain event or after some time has passed.</td>
+              </tr>
+
+              <!-- Frequency -->
+              <tr class="vocab-row" data-cat="freq">
+                <td><span class="cat-pill pill-freq">Frequency</span></td>
+                <td class="jp-col">いつも</td>
+                <td class="romaji-col">itsumo</td>
+                <td class="meaning-col">always</td>
+                <td>100% frequency. Pairs with positive verbs.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="freq">
+                <td><span class="cat-pill pill-freq">Frequency</span></td>
+                <td class="jp-col">よく</td>
+                <td class="romaji-col">yoku</td>
+                <td class="meaning-col">often / well</td>
+                <td>80% frequency. Also means "skilfully" or "well" (よくできました).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="freq">
+                <td><span class="cat-pill pill-freq">Frequency</span></td>
+                <td class="jp-col">たいてい</td>
+                <td class="romaji-col">taitei</td>
+                <td class="meaning-col">usually</td>
+                <td>70% frequency. General habit indicator.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="freq">
+                <td><span class="cat-pill pill-freq">Frequency</span></td>
+                <td class="jp-col">ときどき</td>
+                <td class="romaji-col">tokidoki</td>
+                <td class="meaning-col">sometimes</td>
+                <td>50% frequency. Occasional actions.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="freq">
+                <td><span class="cat-pill pill-freq">Frequency</span></td>
+                <td class="jp-col">あまり</td>
+                <td class="romaji-col">amari</td>
+                <td class="meaning-col">not very (+ negative)</td>
+                <td><span class="text-danger">⚠️ Must end with negative verb</span> (あまり〜ない).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="freq">
+                <td><span class="cat-pill pill-freq">Frequency</span></td>
+                <td class="jp-col">ぜんぜん</td>
+                <td class="romaji-col">zenzen</td>
+                <td class="meaning-col">not at all (+ negative)</td>
+                <td><span class="text-danger">⚠️ Must end with negative verb</span> (ぜんぜん〜ない). Absolute zero.</td>
+              </tr>
+
+              <!-- Degree -->
+              <tr class="vocab-row" data-cat="degree">
+                <td><span class="cat-pill pill-degree">Degree</span></td>
+                <td class="jp-col">とても</td>
+                <td class="romaji-col">totemo</td>
+                <td class="meaning-col">very</td>
+                <td>Modifies positive adjectives to show intensity.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="degree">
+                <td><span class="cat-pill pill-degree">Degree</span></td>
+                <td class="jp-col">たいへん</td>
+                <td class="romaji-col">taihen</td>
+                <td class="meaning-col">very / tough</td>
+                <td>Formal standard modifier. Also indicates a hard situation.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="degree">
+                <td><span class="cat-pill pill-degree">Degree</span></td>
+                <td class="jp-col">すこし</td>
+                <td class="romaji-col">sukoshi</td>
+                <td class="meaning-col">a little</td>
+                <td>Polite or written indicator of minor amount.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="degree">
+                <td><span class="cat-pill pill-degree">Degree</span></td>
+                <td class="jp-col">ちょっと</td>
+                <td class="romaji-col">chotto</td>
+                <td class="meaning-col">a bit</td>
+                <td>Casual amount modifier. Also used to politely reject invites.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="degree">
+                <td><span class="cat-pill pill-degree">Degree</span></td>
+                <td class="jp-col">もっと</td>
+                <td class="romaji-col">motto</td>
+                <td class="meaning-col">more</td>
+                <td>Increase standard degree. Works with adjectives or adverbs.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="degree">
+                <td><span class="cat-pill pill-degree">Degree</span></td>
+                <td class="jp-col">いちばん</td>
+                <td class="romaji-col">ichiban</td>
+                <td class="meaning-col">most / best</td>
+                <td>Superlative indicator (e.g. number one).</td>
+              </tr>
+
+              <!-- Comparison -->
+              <tr class="vocab-row" data-cat="compare">
+                <td><span class="cat-pill pill-compare">Compare</span></td>
+                <td class="jp-col">より</td>
+                <td class="romaji-col">yori</td>
+                <td class="meaning-col">than</td>
+                <td>The baseline comparison particle (A より = Than A).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="compare">
+                <td><span class="cat-pill pill-compare">Compare</span></td>
+                <td class="jp-col">ほうが</td>
+                <td class="romaji-col">hou ga</td>
+                <td class="meaning-col">more (option)</td>
+                <td>The preferred choice indicator (B のほうが = B is more).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="compare">
+                <td><span class="cat-pill pill-compare">Compare</span></td>
+                <td class="jp-col">おなじ</td>
+                <td class="romaji-col">onaji</td>
+                <td class="meaning-col">same</td>
+                <td>Indicates similarity. (Takes particle と: 〜とおなじ).</td>
+              </tr>
+
+              <!-- Quantity -->
+              <tr class="vocab-row" data-cat="quantity">
+                <td><span class="cat-pill pill-quantity">Quantity</span></td>
+                <td class="jp-col">ぐらい</td>
+                <td class="romaji-col">gurai</td>
+                <td class="meaning-col">approx. (duration)</td>
+                <td>For durations or amounts (e.g. ２時間ぐらい).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="quantity">
+                <td><span class="cat-pill pill-quantity">Quantity</span></td>
+                <td class="jp-col">ごろ</td>
+                <td class="romaji-col">goro</td>
+                <td class="meaning-col">approx. (time point)</td>
+                <td><span class="text-danger">⚠️ Point in time only</span> (e.g. ２時ごろ). No durations!</td>
+              </tr>
+              <tr class="vocab-row" data-cat="quantity">
+                <td><span class="cat-pill pill-quantity">Quantity</span></td>
+                <td class="jp-col">だけ</td>
+                <td class="romaji-col">dake</td>
+                <td class="meaning-col">only / just</td>
+                <td>Used with positive verb forms (X だけあります).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="quantity">
+                <td><span class="cat-pill pill-quantity">Quantity</span></td>
+                <td class="jp-col">しか</td>
+                <td class="romaji-col">shika</td>
+                <td class="meaning-col">only (insufficient)</td>
+                <td><span class="text-danger">⚠️ Must end with negative verb</span> (X しかありません).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="quantity">
+                <td><span class="cat-pill pill-quantity">Quantity</span></td>
+                <td class="jp-col">ぜんぶ</td>
+                <td class="romaji-col">zenbu</td>
+                <td class="meaning-col">all / everything</td>
+                <td>Refers to completing or including the whole set.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="quantity">
+                <td><span class="cat-pill pill-quantity">Quantity</span></td>
+                <td class="jp-col">みんな</td>
+                <td class="romaji-col">minna</td>
+                <td class="meaning-col">everyone / all</td>
+                <td>Often references a group of people.</td>
+              </tr>
+
+              <!-- Indefinite -->
+              <tr class="vocab-row" data-cat="indef">
+                <td><span class="cat-pill pill-indef">Indefinite</span></td>
+                <td class="jp-col">なにか</td>
+                <td class="romaji-col">nanika</td>
+                <td class="meaning-col">something</td>
+                <td>Question + か. Pairs with positive verbs.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="indef">
+                <td><span class="cat-pill pill-indef">Indefinite</span></td>
+                <td class="jp-col">なにも</td>
+                <td class="romaji-col">nanimo</td>
+                <td class="meaning-col">nothing</td>
+                <td><span class="text-danger">⚠️ Must end with negative verb</span>. Question + も.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="indef">
+                <td><span class="cat-pill pill-indef">Indefinite</span></td>
+                <td class="jp-col">だれか</td>
+                <td class="romaji-col">dareka</td>
+                <td class="meaning-col">someone</td>
+                <td>Question + か. Positive verb form.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="indef">
+                <td><span class="cat-pill pill-indef">Indefinite</span></td>
+                <td class="jp-col">だれも</td>
+                <td class="romaji-col">daremo</td>
+                <td class="meaning-col">no one</td>
+                <td><span class="text-danger">⚠️ Must end with negative verb</span>.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="indef">
+                <td><span class="cat-pill pill-indef">Indefinite</span></td>
+                <td class="jp-col">どこか</td>
+                <td class="romaji-col">dokoka</td>
+                <td class="meaning-col">somewhere</td>
+                <td>Question + か. Positive direction.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="indef">
+                <td><span class="cat-pill pill-indef">Indefinite</span></td>
+                <td class="jp-col">どこも</td>
+                <td class="romaji-col">dokomo</td>
+                <td class="meaning-col">nowhere</td>
+                <td><span class="text-danger">⚠️ Must end with negative verb</span>.</td>
+              </tr>
+
+              <!-- Connectors -->
+              <tr class="vocab-row" data-cat="connector">
+                <td><span class="cat-pill pill-connector">Connector</span></td>
+                <td class="jp-col">そして</td>
+                <td class="romaji-col">soshite</td>
+                <td class="meaning-col">and / then</td>
+                <td>Starts a sentence to add information or time steps.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="connector">
+                <td><span class="cat-pill pill-connector">Connector</span></td>
+                <td class="jp-col">それから</td>
+                <td class="romaji-col">sorekara</td>
+                <td class="meaning-col">and then / after that</td>
+                <td>Used to describe sequential actions.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="connector">
+                <td><span class="cat-pill pill-connector">Connector</span></td>
+                <td class="jp-col">だから</td>
+                <td class="romaji-col">dakara</td>
+                <td class="meaning-col">therefore / so</td>
+                <td>Starts a sentence to express causality (so...).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="connector">
+                <td><span class="cat-pill pill-connector">Connector</span></td>
+                <td class="jp-col">でも</td>
+                <td class="romaji-col">demo</td>
+                <td class="meaning-col">but / however</td>
+                <td>Starts a sentence to show contrast (casual/spoken).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="connector">
+                <td><span class="cat-pill pill-connector">Connector</span></td>
+                <td class="jp-col">しかし</td>
+                <td class="romaji-col">shikashi</td>
+                <td class="meaning-col">however / but</td>
+                <td>Starts a sentence to show contrast (formal/written).</td>
+              </tr>
+
+              <!-- High-Freq -->
+              <tr class="vocab-row" data-cat="highfreq">
+                <td><span class="cat-pill pill-highfreq">High-Freq</span></td>
+                <td class="jp-col">だんだん</td>
+                <td class="romaji-col">dandan</td>
+                <td class="meaning-col">gradually</td>
+                <td>Used with verbs of change (e.g. なる, 増える).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="highfreq">
+                <td><span class="cat-pill pill-highfreq">High-Freq</span></td>
+                <td class="jp-col">ゆっくり</td>
+                <td class="romaji-col">yukkuri</td>
+                <td class="meaning-col">slowly / at ease</td>
+                <td>Leisurely pace. (ゆっくり話してください).</td>
+              </tr>
+              <tr class="vocab-row" data-cat="highfreq">
+                <td><span class="cat-pill pill-highfreq">High-Freq</span></td>
+                <td class="jp-col">いっしょに</td>
+                <td class="romaji-col">issho ni</td>
+                <td class="meaning-col">together</td>
+                <td>Doing things with other people. Takes particle と.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="highfreq">
+                <td><span class="cat-pill pill-highfreq">High-Freq</span></td>
+                <td class="jp-col">たぶん</td>
+                <td class="romaji-col">tabun</td>
+                <td class="meaning-col">probably</td>
+                <td>Speculation. Often ends with 〜でしょう or 〜と思います.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="highfreq">
+                <td><span class="cat-pill pill-highfreq">High-Freq</span></td>
+                <td class="jp-col">ぜひ</td>
+                <td class="romaji-col">zehi</td>
+                <td class="meaning-col">definitely / by all means</td>
+                <td>Expresses strong hope or request. Pairs with 〜たい or 〜てください.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="highfreq">
+                <td><span class="cat-pill pill-highfreq">High-Freq</span></td>
+                <td class="jp-col">なかなか</td>
+                <td class="romaji-col">nakanaka</td>
+                <td class="meaning-col">not easily / not readily</td>
+                <td><span class="text-danger">⚠️ Must end with negative verb</span> (なかなか〜ない). Delayed action.</td>
+              </tr>
+              <tr class="vocab-row" data-cat="highfreq">
+                <td><span class="cat-pill pill-highfreq">High-Freq</span></td>
+                <td class="jp-col">ほんとうに</td>
+                <td class="romaji-col">hontou ni</td>
+                <td class="meaning-col">really / truly</td>
+                <td>Emphasizes sincerity or high degree.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  
+    <!-- SLIDE 14: GRAMMAR START -->
+
+    <section class="slide" id="slide-14" data-slide-index="14">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 1</div>
+        <h2>State & Being (状態・存在)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜です / 〜ではありません</div>
+              <div class="grammar-meaning">To be / Not to be (Present)</div>
+            </div>
+            <div class="grammar-structure">[Noun/Na-Adj] です<br>[Noun/Na-Adj] ではありません</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">私は学生です。</div><div class="grammar-ex-en">I am a student.</div></div><div class="grammar-example"><div class="grammar-ex-jp">彼は先生ではありません。</div><div class="grammar-ex-en">He is not a teacher.</div></div>
+            </div>
+            <div class="grammar-notes">💡 ではありません is formal. じゃありません is used in daily speaking.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜でした / 〜ではありませんでした</div>
+              <div class="grammar-meaning">Was / Was not (Past)</div>
+            </div>
+            <div class="grammar-structure">[Noun/Na-Adj] でした<br>[Noun/Na-Adj] ではありませんでした</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">きのうは雨でした。</div><div class="grammar-ex-en">It was raining yesterday.</div></div><div class="grammar-example"><div class="grammar-ex-jp">テストは簡単ではありませんでした。</div><div class="grammar-ex-en">The test was not easy.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Past tense of the copula. Watch out for I-adjectives which conjugate differently (〜かったです).</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜があります / 〜います</div>
+              <div class="grammar-meaning">There is / To have (Existence)</div>
+            </div>
+            <div class="grammar-structure">[Place] に [Thing] があります<br>[Place] に [Person/Animal] がいます</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">机の上に本があります。</div><div class="grammar-ex-en">There is a book on the desk.</div></div><div class="grammar-example"><div class="grammar-ex-jp">あそこに犬がいます。</div><div class="grammar-ex-en">There is a dog over there.</div></div>
+            </div>
+            <div class="grammar-notes">💡 あります is for inanimate objects. います is for living, moving things.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-15" data-slide-index="15">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 2</div>
+        <h2>Movement & Requests (移動・依頼)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜へ行きます / 〜に行きます</div>
+              <div class="grammar-meaning">Go to ~</div>
+            </div>
+            <div class="grammar-structure">[Place] へ/に 行きます / 来ます / 帰ります</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">明日、東京へ行きます。</div><div class="grammar-ex-en">I will go to Tokyo tomorrow.</div></div><div class="grammar-example"><div class="grammar-ex-jp">うちへ帰ります。</div><div class="grammar-ex-en">I will return home.</div></div>
+            </div>
+            <div class="grammar-notes">💡 へ emphasizes direction, に emphasizes destination. Both are mostly interchangeable for N5.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜をください</div>
+              <div class="grammar-meaning">Please give me ~</div>
+            </div>
+            <div class="grammar-structure">[Noun] をください</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">水をください。</div><div class="grammar-ex-en">Please give me water.</div></div><div class="grammar-example"><div class="grammar-ex-jp">りんごを３つください。</div><div class="grammar-ex-en">Please give me three apples.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Used when ordering at restaurants or asking for items in a store.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜てください</div>
+              <div class="grammar-meaning">Please do ~</div>
+            </div>
+            <div class="grammar-structure">[Verb て-form] ください</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">ちょっと待ってください。</div><div class="grammar-ex-en">Please wait a moment.</div></div><div class="grammar-example"><div class="grammar-ex-jp">ここに名前を書いてください。</div><div class="grammar-ex-en">Please write your name here.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Standard polite request. Requires mastering the Verb て-form.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-16" data-slide-index="16">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 3</div>
+        <h2>Suggestions & Permissions (提案・許可)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜ましょう / 〜ませんか</div>
+              <div class="grammar-meaning">Let's ~ / Won't we ~?</div>
+            </div>
+            <div class="grammar-structure">[Verb stem] ましょう<br>[Verb stem] ませんか</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">一緒に昼ご飯を食べましょう。</div><div class="grammar-ex-en">Let's eat lunch together.</div></div><div class="grammar-example"><div class="grammar-ex-jp">コーヒーを飲みませんか。</div><div class="grammar-ex-en">Won't you drink some coffee?</div></div>
+            </div>
+            <div class="grammar-notes">💡 ませんか is softer and more polite as it gives the listener room to refuse.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜てもいいです</div>
+              <div class="grammar-meaning">May I ~ / It is okay to ~</div>
+            </div>
+            <div class="grammar-structure">[Verb て-form] もいいです</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">ここで写真を撮ってもいいですか。</div><div class="grammar-ex-en">May I take a picture here?</div></div><div class="grammar-example"><div class="grammar-ex-jp">このペンを使ってもいいです。</div><div class="grammar-ex-en">You may use this pen.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Often used as a question to ask for permission.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜てはいけません</div>
+              <div class="grammar-meaning">You must not ~</div>
+            </div>
+            <div class="grammar-structure">[Verb て-form] はいけません</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">ここでタバコを吸ってはいけません。</div><div class="grammar-ex-en">You must not smoke here.</div></div><div class="grammar-example"><div class="grammar-ex-jp">病院で電話をしてはいけません。</div><div class="grammar-ex-en">You must not talk on the phone in the hospital.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Strong prohibition. Often seen on signs or rules.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-17" data-slide-index="17">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 4</div>
+        <h2>Obligation & State (義務・状態)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜なければなりません</div>
+              <div class="grammar-meaning">Must do ~ / Have to ~</div>
+            </div>
+            <div class="grammar-structure">[Verb ない-form, drop い] ければなりません</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">明日、早く起きなければなりません。</div><div class="grammar-ex-en">I must wake up early tomorrow.</div></div><div class="grammar-example"><div class="grammar-ex-jp">薬を飲まなければなりません。</div><div class="grammar-ex-en">I must take medicine.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Double negative construction literally meaning 'if you don't do, it's not okay'.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜なくてもいいです</div>
+              <div class="grammar-meaning">Don't have to ~</div>
+            </div>
+            <div class="grammar-structure">[Verb ない-form, drop い] くてもいいです</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">明日は学校へ行かなくてもいいです。</div><div class="grammar-ex-en">I don't have to go to school tomorrow.</div></div>
+            </div>
+            <div class="grammar-notes">💡 The exact opposite of なければなりません.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜ています</div>
+              <div class="grammar-meaning">Currently doing ~ / State of being</div>
+            </div>
+            <div class="grammar-structure">[Verb て-form] います</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">今、本を読んでいます。</div><div class="grammar-ex-en">I am reading a book right now.</div></div><div class="grammar-example"><div class="grammar-ex-jp">私は結婚しています。</div><div class="grammar-ex-en">I am married. (State)</div></div>
+            </div>
+            <div class="grammar-notes">💡 Can mean an action in progress (I am eating) OR a continuous state (I live in Tokyo).</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-18" data-slide-index="18">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 5</div>
+        <h2>Desire & Ability (願望・可能)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜たいです / 〜ほしいです</div>
+              <div class="grammar-meaning">Want to do / Want a thing</div>
+            </div>
+            <div class="grammar-structure">[Verb stem] たいです<br>[Noun] がほしいです</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">日本へ行きたいです。</div><div class="grammar-ex-en">I want to go to Japan.</div></div><div class="grammar-example"><div class="grammar-ex-jp">新しい車がほしいです。</div><div class="grammar-ex-en">I want a new car.</div></div>
+            </div>
+            <div class="grammar-notes">💡 たい attaches to verbs. ほしい acts like an adjective taking the object with が.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜ことができます</div>
+              <div class="grammar-meaning">Can do ~ / Ability</div>
+            </div>
+            <div class="grammar-structure">[Verb Dictionary Form] ことができます</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">私はピアノを弾くことができます。</div><div class="grammar-ex-en">I can play the piano.</div></div><div class="grammar-example"><div class="grammar-ex-jp">ここで切符を買うことができます。</div><div class="grammar-ex-en">You can buy a ticket here.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Formal way to express potential/ability in N5.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-19" data-slide-index="19">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 6</div>
+        <h2>Thoughts & Explanations (思考・説明)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜から / 〜ので</div>
+              <div class="grammar-meaning">Because ~</div>
+            </div>
+            <div class="grammar-structure">[Reason Phrase] から/ので、[Result]</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">雨が降っているから、行きません。</div><div class="grammar-ex-en">Because it's raining, I won't go.</div></div><div class="grammar-example"><div class="grammar-ex-jp">時間がないので、急いでください。</div><div class="grammar-ex-en">Because there's no time, please hurry.</div></div>
+            </div>
+            <div class="grammar-notes">💡 ので is slightly more formal and objective than から.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜と思います</div>
+              <div class="grammar-meaning">I think that ~</div>
+            </div>
+            <div class="grammar-structure">[Plain Form Verb/Adj] と思います</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">明日は晴れると思います。</div><div class="grammar-ex-en">I think it will be sunny tomorrow.</div></div><div class="grammar-example"><div class="grammar-ex-jp">この映画は面白いと思います。</div><div class="grammar-ex-en">I think this movie is interesting.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Before と, you must use the plain/casual form (e.g., だ for nouns/na-adjectives).</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜んです</div>
+              <div class="grammar-meaning">Explanatory tone / Seeking explanation</div>
+            </div>
+            <div class="grammar-structure">[Plain Form] んです / のです</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">どうしたんですか。</div><div class="grammar-ex-en">What happened? / What's wrong?</div></div><div class="grammar-example"><div class="grammar-ex-jp">頭が痛いんです。</div><div class="grammar-ex-en">It's that my head hurts.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Used heavily in speech to explain a situation, reason, or ask for a reason.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-20" data-slide-index="20">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 7</div>
+        <h2>Time Relations (時間関係)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜前に / 〜後で</div>
+              <div class="grammar-meaning">Before ~ / After ~</div>
+            </div>
+            <div class="grammar-structure">[Dict Verb/Nounの] 前に<br>[た-Form Verb/Nounの] 後で</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">寝る前に、本を読みます。</div><div class="grammar-ex-en">Before sleeping, I read a book.</div></div><div class="grammar-example"><div class="grammar-ex-jp">授業の後で、映画を見ます。</div><div class="grammar-ex-en">After class, I will watch a movie.</div></div>
+            </div>
+            <div class="grammar-notes">💡 前に takes dictionary form. 後で takes た(past) form.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜てから</div>
+              <div class="grammar-meaning">After doing ~ (Sequential)</div>
+            </div>
+            <div class="grammar-structure">[Verb て-form] から</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">手を洗ってから、ご飯を食べます。</div><div class="grammar-ex-en">After washing hands, I eat dinner.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Indicates action B happens immediately or sequentially after action A.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜ながら</div>
+              <div class="grammar-meaning">While doing ~</div>
+            </div>
+            <div class="grammar-structure">[Verb stem] ながら</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">音楽を聞きながら、勉強します。</div><div class="grammar-ex-en">I study while listening to music.</div></div>
+            </div>
+            <div class="grammar-notes">💡 The main action is the second verb.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-21" data-slide-index="21">
+      <div class="slide-header">
+        <div class="slide-badge">Practice</div>
+        <h2>Grammar Practice Questions</h2>
+      </div>
+      <div class="slide-body">
+<div class="practice-section"><h3 class="practice-title"><i data-lucide="check-circle"></i> JLPT N5 Style Grammar Quiz</h3><div class="practice-question"><div class="pq-text">１．あした、えいがを＿＿＿＿か。</div><div class="practice-options"><button class="practice-option" data-correct>A. みます</button><button class="practice-option">B. みました</button><button class="practice-option">C. みて</button></div><div class="practice-explanation"><strong>Answer: A. みます</strong><br>Tomorrow (あした) indicates future tense.</div></div><div class="practice-question"><div class="pq-text">２．ここは びょういんです。タバコを ＿＿＿＿はいけません。</div><div class="practice-options"><button class="practice-option">A. すいます</button><button class="practice-option">B. すう</button><button class="practice-option" data-correct>C. すって</button></div><div class="practice-explanation"><strong>Answer: C. すって</strong><br>〜てはいけません (must not) requires the Te-form.</div></div><div class="practice-question"><div class="pq-text">３．にく＿＿＿さかな＿＿＿どちらが好きですか。</div><div class="practice-options"><button class="practice-option" data-correct>A. と / と</button><button class="practice-option">B. や / や</button><button class="practice-option">C. に / に</button></div><div class="practice-explanation"><strong>Answer: A. と / と</strong><br>The pattern is Aと Bと どちらが〜 (Which is more... A or B?).</div></div></div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-22" data-slide-index="22">
+      <div class="slide-header">
+        <div class="slide-badge">Expressions</div>
+        <h2>Daily Conversation Expressions</h2>
+      </div>
+      <div class="slide-body">
+        <div class="conv-grid">
+
+          <div class="conv-card">
+            <div class="conv-jp">ありがとうございます</div>
+            <div class="conv-ro">Arigatou gozaimasu</div>
+            <div class="conv-en">Thank you very much</div>
+            <div class="conv-context">Polite • Anytime</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">どういたしまして</div>
+            <div class="conv-ro">Dou itashimashite</div>
+            <div class="conv-en">You're welcome</div>
+            <div class="conv-context">Polite • Reply to Thanks</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">すみません</div>
+            <div class="conv-ro">Sumimasen</div>
+            <div class="conv-en">Excuse me / I'm sorry</div>
+            <div class="conv-context">Standard • Apology/Calling attention</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">ごめんなさい</div>
+            <div class="conv-ro">Gomen nasai</div>
+            <div class="conv-en">I'm sorry</div>
+            <div class="conv-context">Casual/Standard • Apology</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">失礼します</div>
+            <div class="conv-ro">Shitsurei shimasu</div>
+            <div class="conv-en">Excuse me (entering/leaving)</div>
+            <div class="conv-context">Formal • Office/Entering room</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">よろしくお願いします</div>
+            <div class="conv-ro">Yoroshiku onegaishimasu</div>
+            <div class="conv-en">Please treat me well / Thanks in advance</div>
+            <div class="conv-context">Standard • Introductions/Requests</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">いただきます</div>
+            <div class="conv-ro">Itadakimasu</div>
+            <div class="conv-en">Let's eat (I humbly receive)</div>
+            <div class="conv-context">Standard • Before meal</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">ごちそうさまでした</div>
+            <div class="conv-ro">Gochisousama deshita</div>
+            <div class="conv-en">Thank you for the meal</div>
+            <div class="conv-context">Standard • After meal</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">お疲れさまです</div>
+            <div class="conv-ro">Otsukaresama desu</div>
+            <div class="conv-en">Good work / Thanks for your hard work</div>
+            <div class="conv-context">Workplace • Greeting coworkers</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">お先に失礼します</div>
+            <div class="conv-ro">Osakini shitsurei shimasu</div>
+            <div class="conv-en">Excuse me for leaving before you</div>
+            <div class="conv-context">Workplace • Leaving work early</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">行ってきます</div>
+            <div class="conv-ro">Ittekimasu</div>
+            <div class="conv-en">I'm leaving (and coming back)</div>
+            <div class="conv-context">Home • Leaving house</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">行ってらっしゃい</div>
+            <div class="conv-ro">Itterasshai</div>
+            <div class="conv-en">Please go and come back safely</div>
+            <div class="conv-context">Home • Reply to Ittekimasu</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">ただいま</div>
+            <div class="conv-ro">Tadaima</div>
+            <div class="conv-en">I'm home</div>
+            <div class="conv-context">Home • Returning home</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">おかえりなさい</div>
+            <div class="conv-ro">Okaerinasai</div>
+            <div class="conv-en">Welcome back</div>
+            <div class="conv-context">Home • Reply to Tadaima</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">もしもし</div>
+            <div class="conv-ro">Moshi moshi</div>
+            <div class="conv-en">Hello? (on phone)</div>
+            <div class="conv-context">Phone • Answering</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">いらっしゃいませ</div>
+            <div class="conv-ro">Irasshaimase</div>
+            <div class="conv-en">Welcome (to a store)</div>
+            <div class="conv-context">Retail • Staff greeting customer</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">おめでとうございます</div>
+            <div class="conv-ro">Omedetou gozaimasu</div>
+            <div class="conv-en">Congratulations</div>
+            <div class="conv-context">Polite • Celebration</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">お元気ですか</div>
+            <div class="conv-ro">Ogenki desu ka</div>
+            <div class="conv-en">How are you?</div>
+            <div class="conv-context">Standard • Greeting</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">はい / いいえ</div>
+            <div class="conv-ro">Hai / Iie</div>
+            <div class="conv-en">Yes / No</div>
+            <div class="conv-context">Standard</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">そうです / ちがいます</div>
+            <div class="conv-ro">Sou desu / Chigaimasu</div>
+            <div class="conv-en">That's right / That's wrong</div>
+            <div class="conv-context">Standard • Confirmation</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">わかりました</div>
+            <div class="conv-ro">Wakarimashita</div>
+            <div class="conv-en">I understand</div>
+            <div class="conv-context">Standard • Acknowledgment</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">大丈夫です</div>
+            <div class="conv-ro">Daijoubu desu</div>
+            <div class="conv-en">It's okay / I'm fine</div>
+            <div class="conv-context">Standard • Reassurance</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-23" data-slide-index="23">
+      <div class="slide-header">
+        <div class="slide-badge">Particles</div>
+        <h2>Particles Master Table (助詞)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="table-container particle-table-container">`r`n          <table class="vocab-table" id="table-particles">
+            <thead>
+              <tr>
+                <th style="width: 10%">Particle</th>
+                <th style="width: 25%">Core Meaning</th>
+                <th style="width: 35%">Usage Note</th>
+                <th style="width: 30%">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">は</td><td class="meaning-col">Topic Marker</td><td class="mnemonic-col">Uses: Topic, Contrast, General Statement | Trap: は = topic</td><td class="example-col">私は学生です。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">が</td><td class="meaning-col">Subject Marker</td><td class="mnemonic-col">Uses: Subject, New Information, Like / Skill, Ability | Trap: 好き requires が</td><td class="example-col">猫がいます。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">を</td><td class="meaning-col">Direct Object Marker</td><td class="mnemonic-col">Uses: Direct Object, Thing Being Studied, Thing Being Watched, Path Traversed | Trap: Do not use を with 好きです.</td><td class="example-col">りんごを食べます。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">に</td><td class="meaning-col">Target / Point</td><td class="mnemonic-col">Uses: Time, Destination, Existence Location, Receiver | Trap: Do not use に with 今日.</td><td class="example-col">７時に起きます。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">へ</td><td class="meaning-col">Direction</td><td class="mnemonic-col">Uses: Direction, Movement | Trap: へ focuses on direction.</td><td class="example-col">東京へ行きます。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">で</td><td class="meaning-col">Place of Action / Means</td><td class="mnemonic-col">Uses: Action Location, Transportation, Tool, Language | Trap: Action location = で</td><td class="example-col">図書館で勉強します。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">と</td><td class="meaning-col">And / With</td><td class="mnemonic-col">Uses: Complete List, Together With, Quotation</td><td class="example-col">肉と魚</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">や</td><td class="meaning-col">Partial List</td><td class="mnemonic-col">Uses: A and B among others</td><td class="example-col">本やペンがあります。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">も</td><td class="meaning-col">Also</td><td class="mnemonic-col">Uses: Also, Too</td><td class="example-col">私も学生です。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">から</td><td class="meaning-col">From</td><td class="mnemonic-col">Uses: Starting Time, Starting Place, Reason</td><td class="example-col">９時からです。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">まで</td><td class="meaning-col">Until / To</td><td class="mnemonic-col">Uses: Ending Time, Ending Place</td><td class="example-col">５時までです。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">より</td><td class="meaning-col">Than</td><td class="mnemonic-col">Uses: Comparison</td><td class="example-col">父より母のほうが若いです。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">だけ</td><td class="meaning-col">Only</td><td class="mnemonic-col">Uses: Only</td><td class="example-col">水だけ飲みます。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">しか</td><td class="meaning-col">Only (with negative)</td><td class="mnemonic-col">Uses: Nothing but | Trap: しか MUST be followed by a negative verb.</td><td class="example-col">水しか飲みません。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">か</td><td class="meaning-col">Question Marker</td><td class="mnemonic-col">Uses: Question, Or</td><td class="example-col">学生ですか。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">ね</td><td class="meaning-col">Agreement Tag</td><td class="mnemonic-col">Uses: Right?</td><td class="example-col">いい天気ですね。</td></tr>
+              <tr class="vocab-row"><td class="jp-col" style="font-size: 1.5rem;">よ</td><td class="meaning-col">Assertion Tag</td><td class="mnemonic-col">Uses: New Information</td><td class="example-col">おいしいですよ。</td></tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-24" data-slide-index="24">
+      <div class="slide-header">
+        <div class="slide-badge">Warning</div>
+        <h2>Major Exam Traps (試験の罠)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="traps-grid">
+          <div class="trap-card">
+            <div class="trap-card-header"><h4>は (wa) vs が (ga)</h4></div>
+            <div class="trap-comparison">
+              <div class="comp-col"><span class="word-highlight">は</span><p class="desc">Topic marker. Used for known information.</p><p class="ex">私が学生です。(As for me, I am a student)</p></div>
+              <div class="comp-col border-left"><span class="word-highlight">が</span><p class="desc">Subject marker. Used for new info, or with desires/skills (好き, ほしい).</p><p class="ex">犬が好きです。(I like dogs)</p></div>
+            </div>
+          </div>
+          <div class="trap-card">
+            <div class="trap-card-header"><h4>に (ni) vs で (de)</h4></div>
+            <div class="trap-comparison">
+              <div class="comp-col"><span class="word-highlight">に</span><p class="desc">Location of EXISTENCE (います/あります).</p><p class="ex">部屋に犬がいます。(Dog is in the room)</p></div>
+              <div class="comp-col border-left"><span class="word-highlight">で</span><p class="desc">Location of ACTION (食べる/飲む).</p><p class="ex">部屋で食べます。(Eat in the room)</p></div>
+            </div>
+          </div>
+          <div class="trap-card">
+            <div class="trap-card-header"><h4>だけ (dake) vs しか (shika)</h4></div>
+            <div class="trap-comparison">
+              <div class="comp-col"><span class="word-highlight">だけ</span><p class="desc">Only. Takes positive verbs.</p><p class="ex">百円だけあります。</p></div>
+              <div class="comp-col border-left"><span class="word-highlight">しか</span><p class="desc">Only. MUST take negative verbs.</p><p class="ex">百円しかありません。</p></div>
+            </div>
+          </div>
+          <div class="trap-card">
+            <div class="trap-card-header"><h4>あります (arimasu) vs います (imasu)</h4></div>
+            <div class="trap-comparison">
+              <div class="comp-col"><span class="word-highlight">あります</span><p class="desc">For non-living / immovable things (trees, books).</p></div>
+              <div class="comp-col border-left"><span class="word-highlight">います</span><p class="desc">For living / moving things (people, animals).</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-25" data-slide-index="25">
+      <div class="slide-header">
+        <div class="slide-badge">Final Review</div>
+        <h2>Last Day Before Exam Revision</h2>
+      </div>
+      <div class="slide-body" style="font-size: 0.9rem;">
+        <p class="slide-desc">Memorize this sheet in the 30 minutes before entering the exam room!</p>
+        <div style="column-count: 2; column-gap: 2rem; background: var(--bg-table-header); padding: 1.5rem; border-radius: 8px;">
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);">CRITICAL GRAMMAR</h4>
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem; color: var(--text-main);">
+            <li style="margin-bottom: 0.3rem;"><strong>〜てください</strong> : Please do</li>
+            <li style="margin-bottom: 0.3rem;"><strong>〜てもいいです</strong> : May I do?</li>
+            <li style="margin-bottom: 0.3rem;"><strong>〜てはいけません</strong> : Must not do</li>
+            <li style="margin-bottom: 0.3rem;"><strong>〜なければなりません</strong> : Must do</li>
+            <li style="margin-bottom: 0.3rem;"><strong>〜たことがあります</strong> : Have experienced</li>
+            <li style="margin-bottom: 0.3rem;"><strong>〜たり〜たりします</strong> : Do things like A and B</li>
+          </ul>
+
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);">TRAP PARTICLES</h4>
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem; color: var(--text-main);">
+            <li style="margin-bottom: 0.3rem;"><strong>[Action Place] で</strong> : (公園で走る)</li>
+            <li style="margin-bottom: 0.3rem;"><strong>[Existence Place] に</strong> : (公園にいる)</li>
+            <li style="margin-bottom: 0.3rem;"><strong>しか ＋ Negative</strong> : Only</li>
+          </ul>
+
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);">ADVERBS</h4>
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem; color: var(--text-main);">
+            <li style="margin-bottom: 0.3rem;"><strong>まだ ＋ Negative</strong> : Not yet</li>
+            <li style="margin-bottom: 0.3rem;"><strong>もう ＋ Past</strong> : Already</li>
+            <li style="margin-bottom: 0.3rem;"><strong>あまり ＋ Negative</strong> : Not very</li>
+            <li style="margin-bottom: 0.3rem;"><strong>ぜんぜん ＋ Negative</strong> : Not at all</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JS Link -->
+  <script src="app.js"></script>
+</body>
+</html>
+

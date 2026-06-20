@@ -1,0 +1,1897 @@
+/* ==========================================================================
+   DESIGN SYSTEM, VARIABLES & THEMES
+   ========================================================================== */
+
+:root {
+  /* Common variables */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-japanese: 'Noto Sans JP', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 32px;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Theme 1: Sakura 🌸 (Default Warm Soft Pink) --- */
+.theme-sakura {
+  --bg-app: #fffbf9;
+  --bg-card: #ffffff;
+  --bg-table-header: #fff0f3;
+  --bg-table-zebra: #fffafb;
+  --text-main: #2d3436;
+  --text-muted: #636e72;
+  --text-light: #b2bec3;
+  --primary: #d63031;
+  --primary-rgb: 214, 48, 49;
+  --primary-hover: #b32324;
+  --accent: #fd79a8;
+  --accent-light: #ffeef2;
+  --border-color: #f7d5da;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --header-border: #f8d7da;
+}
+
+/* --- Theme 2: Matcha 🍵 (Earthy Green & Cream) --- */
+.theme-matcha {
+  --bg-app: #faf9f5;
+  --bg-card: #ffffff;
+  --bg-table-header: #f0f4ee;
+  --bg-table-zebra: #f8faf6;
+  --text-main: #1e2d24;
+  --text-muted: #57655d;
+  --text-light: #a4b0ab;
+  --primary: #2d6a4f;
+  --primary-rgb: 45, 106, 79;
+  --primary-hover: #1b4332;
+  --accent: #52b788;
+  --accent-light: #e8f5e9;
+  --border-color: #d8e2dc;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --header-border: #d8e2dc;
+}
+
+/* --- Theme 3: Fuji Indigo 🌊 (Clean Blue & Slate) --- */
+.theme-fuji {
+  --bg-app: #f4f6fa;
+  --bg-card: #ffffff;
+  --bg-table-header: #ebf1f8;
+  --bg-table-zebra: #f5f8fc;
+  --text-main: #1e272c;
+  --text-muted: #5c6b73;
+  --text-light: #9fb1bc;
+  --primary: #1d3557;
+  --primary-rgb: 29, 53, 87;
+  --primary-hover: #14213d;
+  --accent: #457b9d;
+  --accent-light: #e6f0fa;
+  --border-color: #d1dbed;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --header-border: #d1dbed;
+}
+
+/* --- Theme 4: Sumi Charcoal 🖤 (Elegant Dark & Gold) --- */
+.theme-sumi {
+  --bg-app: #121214;
+  --bg-card: #1c1c1f;
+  --bg-table-header: #28282d;
+  --bg-table-zebra: #212124;
+  --text-main: #e6e6e9;
+  --text-muted: #a0a0a5;
+  --text-light: #5a5a60;
+  --primary: #d4af37;
+  --primary-rgb: 212, 175, 55;
+  --primary-hover: #b8962c;
+  --accent: #e07a5f;
+  --accent-light: #2b1f1d;
+  --border-color: #38383e;
+  --header-bg: rgba(28, 28, 31, 0.95);
+  --header-border: #38383e;
+}
+
+/* ==========================================================================
+   GLOBAL STYLES & RESET
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* ==========================================================================
+   HEADER NAVIGATION (no-print)
+   ========================================================================== */
+
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 1000;
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nihongo-badge {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.logo-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* --- Search Container --- */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 0.4rem 0.8rem;
+  width: 320px;
+  gap: 0.5rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.search-container:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--text-muted);
+}
+
+#vocabSearch {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: var(--font-main);
+  color: var(--text-main);
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.clear-search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: none; /* Shown dynamically via JS */
+  align-items: center;
+}
+
+.clear-search-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- Controls --- */
+.control-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.control-btn {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: var(--border-radius-md);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.control-btn:hover {
+  background-color: var(--bg-table-header);
+  border-color: var(--primary);
+}
+
+.control-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- Theme Dropdown --- */
+.theme-selector-container {
+  position: relative;
+}
+
+.theme-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 0.5rem;
+  min-width: 170px;
+  box-shadow: var(--shadow-md);
+  display: none; /* Toggled via JS */
+  flex-direction: column;
+  gap: 0.2rem;
+  z-index: 1100;
+}
+
+.theme-dropdown.show {
+  display: flex;
+}
+
+.theme-option {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  padding: 0.5rem 0.8rem;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: left;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: background-color var(--transition-fast);
+}
+
+.theme-option:hover {
+  background-color: var(--bg-table-header);
+}
+
+.theme-option.active {
+  background-color: var(--accent-light);
+  color: var(--primary);
+}
+
+.theme-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.sakura-dot { background-color: #d63031; }
+.matcha-dot { background-color: #2d6a4f; }
+.fuji-dot { background-color: #1d3557; }
+.sumi-dot { background-color: #d4af37; }
+
+/* --- Quick Navigation Sections --- */
+.nav-sections {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.6rem 2rem;
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  z-index: 995;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+/* Hide scrollbar for nav sections */
+.nav-sections::-webkit-scrollbar {
+  display: none;
+}
+.nav-sections {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.jump-btn {
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all var(--transition-fast);
+}
+
+.jump-btn:hover {
+  background-color: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.jump-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Adjust progress bar position since nav is taking space */
+.slide-progress-bar {
+  top: 115px !important;
+}
+.presentation-container {
+  margin-top: 180px !important;
+}
+
+/* ==========================================================================
+   PROGRESS BAR & SLIDE INDICATOR (no-print)
+   ========================================================================== */
+
+.slide-progress-bar {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 990;
+}
+
+.progress-track {
+  width: calc(100% - 240px);
+  height: 4px;
+  background-color: var(--border-color);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 6.66%; /* Slide 1 of 15 */
+  background-color: var(--primary);
+  border-radius: 2px;
+  transition: width var(--transition-normal);
+}
+
+.slide-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav-arrow {
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.nav-arrow:hover {
+  border-color: var(--primary);
+  background-color: var(--bg-table-header);
+}
+
+.nav-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
+.slide-counter {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  min-width: 80px;
+  text-align: center;
+}
+
+/* ==========================================================================
+   MAIN SLIDE VIEWER
+   ========================================================================== */
+
+.presentation-container {
+  max-width: 1100px;
+  margin: 150px auto 4rem auto; /* Accounting for header (72px) + progress bar (48px) */
+  padding: 0 1.5rem;
+}
+
+/* --- Slide Base Styling --- */
+.slide {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+  min-height: 520px;
+  position: relative;
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Slideshow view states */
+.slideshow-mode .slide {
+  display: none;
+}
+
+.slideshow-mode .slide.active-slide {
+  display: flex;
+  animation: slideFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.995);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.slide-header {
+  border-bottom: 2px dashed var(--border-color);
+  padding-bottom: 1.2rem;
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.slide-badge {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background-color: var(--accent-light);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--border-radius-sm);
+  white-space: nowrap;
+}
+
+.slide-header h2 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+}
+
+.slide-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.slide-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   SLIDE 1: SPECIAL TITLE SLIDE
+   ========================================================================== */
+
+.slide-art-accent-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 100%;
+  background-color: var(--primary);
+  border-top-left-radius: var(--border-radius-lg);
+  border-bottom-left-radius: var(--border-radius-lg);
+}
+
+.slide-art-accent-right {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--primary-rgb), 0.06) 0%, rgba(var(--primary-rgb), 0) 70%);
+  pointer-events: none;
+}
+
+.title-slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+  padding: 2rem 0;
+}
+
+.japanese-crest-svg {
+  color: var(--primary);
+  width: 72px;
+  height: 72px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crest-center {
+  animation: pulse-crest 4s infinite ease-in-out;
+}
+
+@keyframes pulse-crest {
+  0%, 100% { transform: scale(1); opacity: 0.15; transform-origin: center; }
+  50% { transform: scale(1.15); opacity: 0.25; transform-origin: center; }
+}
+
+.exam-badge {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  padding: 0.3rem 1.2rem;
+  border-radius: 50px;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  background-color: var(--accent-light);
+}
+
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  max-width: 800px;
+  color: var(--text-main);
+  margin-bottom: 0.8rem;
+}
+
+.main-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.title-divider {
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.author-credits {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+}
+
+.title-footer-tips {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.tip-card-simple {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--bg-app);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius-md);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.tip-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+}
+
+/* ==========================================================================
+   SLIDE 2: INTRO & HOW TO USE
+   ========================================================================== */
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.intro-card {
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 1.8rem;
+}
+
+.main-intro h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+}
+
+.main-intro p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+}
+
+.highlight-box {
+  background-color: var(--bg-card);
+  border-left: 4px solid var(--primary);
+  padding: 1rem;
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: var(--text-main) !important;
+}
+
+.intro-card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.feature-icon-wrapper {
+  background-color: var(--accent-light);
+  color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon-wrapper svg {
+  width: 20px;
+  height: 20px;
+}
+
+.feature-info h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.feature-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Infographic Row */
+.slide-infographic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-app);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+.infographic-step {
+  text-align: center;
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.step-num {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--primary);
+  opacity: 0.3;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.infographic-step h5 {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.infographic-step p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.infographic-divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--border-color);
+}
+
+/* ==========================================================================
+   VOCABULARY TABLES
+   ========================================================================== */
+
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background-color: var(--bg-card);
+  margin-bottom: 1rem;
+}
+
+.vocab-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.vocab-table th {
+  background-color: var(--bg-table-header);
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.vocab-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.vocab-row {
+  transition: background-color var(--transition-fast);
+}
+
+.vocab-row:nth-child(even) {
+  background-color: var(--bg-table-zebra);
+}
+
+.vocab-row:hover {
+  background-color: var(--accent-light);
+}
+
+.jp-col {
+  font-family: var(--font-japanese);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.romaji-col {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.meaning-col {
+  font-weight: 500;
+}
+
+.example-col {
+  font-family: var(--font-japanese);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.example-col .translation {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.mnemonic-col {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Badges */
+.badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--border-radius-sm);
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.badge-pos {
+  background-color: var(--accent-light);
+  color: var(--primary);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+}
+
+.badge-neg {
+  background-color: #fff0f3;
+  color: #c92a2a;
+  border: 1px solid rgba(201, 42, 42, 0.2);
+}
+
+.badge-danger {
+  background-color: #fff0f2;
+  color: #e63946;
+  border: 1px solid rgba(230, 57, 70, 0.3);
+  font-weight: 700;
+}
+
+.badge-warning {
+  background-color: #fffbeb;
+  color: #d97706;
+  border: 1px solid rgba(217, 119, 6, 0.3);
+}
+
+/* Frequency indicators */
+.freq-meter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.freq-100 { background-color: #1d3557; }
+.freq-80 { background-color: #457b9d; }
+.freq-70 { background-color: #38b000; }
+.freq-50 { background-color: #e9c46a; color: #2d3436; }
+.freq-20 { background-color: #f4a261; }
+.freq-0 { background-color: #e76f51; }
+
+/* Compact columns in list slides */
+.compact-table th, .compact-table td {
+  padding: 0.6rem 0.8rem;
+}
+
+/* ==========================================================================
+   SLIDE 6: COMPARISON SPECIAL LAYOUT
+   ========================================================================== */
+
+.comparison-rules-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.rule-card {
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+}
+
+.rule-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.formula-box {
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 0.8rem 1rem;
+  font-family: var(--font-japanese);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.formula-element {
+  background-color: var(--bg-table-header);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.formula-particle {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.formula-adj {
+  border-bottom: 2px double var(--primary);
+}
+
+.formula-explanation {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.example-mini {
+  background-color: var(--bg-card);
+  border-left: 3px solid var(--accent);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.85rem;
+}
+
+.example-mini .translation {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+/* ==========================================================================
+   SLIDE 9: INDEFINITE WORDS BANNER
+   ========================================================================== */
+
+.formula-banner {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--bg-app);
+  padding: 1.2rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  gap: 1rem;
+}
+
+.banner-part {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+}
+
+.formula-term {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-japanese);
+  font-weight: 700;
+}
+
+.formula-result {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.font-red .formula-result {
+  color: #e63946;
+}
+
+.banner-divider {
+  width: 1px;
+  background-color: var(--border-color);
+}
+
+/* ==========================================================================
+   SLIDE 11: KO-SO-A-DO GRAPHIC GRID
+   ========================================================================== */
+
+.kosado-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.kosado-card {
+  border-radius: var(--border-radius-md);
+  padding: 1.2rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-head {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.6rem;
+}
+
+.card-head h3 {
+  font-size: 1rem;
+  font-family: var(--font-japanese);
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.relation-info {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.card-table {
+  width: 100%;
+  font-size: 0.75rem;
+  border-collapse: collapse;
+  margin-bottom: 0.8rem;
+}
+
+.card-table td {
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.card-table td:first-child {
+  font-family: var(--font-japanese);
+  font-weight: 700;
+}
+
+.card-table tr:last-child td {
+  border-bottom: none;
+}
+
+.card-ex {
+  font-family: var(--font-japanese);
+  font-size: 0.75rem;
+  margin-top: auto;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.5rem;
+}
+
+/* Proximity theme headers */
+.badge-ko { background-color: #ffe8cc; color: #d9480f; }
+.badge-so { background-color: #e3faf2; color: #0ca678; }
+.badge-a { background-color: #edf2ff; color: #3b5bdb; }
+.badge-do { background-color: #f3f0ff; color: #7048e8; }
+
+.ko-card { border-top: 4px solid #d9480f; }
+.so-card { border-top: 4px solid #0ca678; }
+.a-card { border-top: 4px solid #3b5bdb; }
+.do-card { border-top: 4px solid #7048e8; }
+
+/* ==========================================================================
+   SLIDE 13: COMPACT SPLIT TABLES
+   ========================================================================== */
+
+.split-tables-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.table-half {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background-color: var(--bg-card);
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   SLIDE 14: EXAM TRAPS LAYOUT
+   ========================================================================== */
+
+.traps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.trap-card {
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.trap-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.6rem;
+}
+
+.trap-icon {
+  width: 20px;
+  height: 20px;
+  color: #e63946;
+}
+
+.trap-card-header h4 {
+  font-size: 1.05rem;
+  color: var(--text-main);
+}
+
+.trap-comparison {
+  display: flex;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.comp-col {
+  flex: 1;
+}
+
+.comp-col-split {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.border-left {
+  border-left: 1px dashed var(--border-color);
+  padding-left: 1rem;
+}
+
+.word-highlight {
+  font-family: var(--font-japanese);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.trap-comparison p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+.trap-comparison .ex {
+  font-family: var(--font-japanese);
+  font-size: 0.8rem;
+  background-color: var(--bg-card);
+  padding: 0.4rem;
+  border-radius: 4px;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.full-width {
+  width: 100%;
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.formula-span {
+  background-color: var(--bg-card);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: var(--font-japanese);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.flex-row {
+  flex-direction: column;
+}
+
+.trap-explanation {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.warning-formula {
+  background-color: var(--bg-card);
+  border: 1px solid #ffb3c1;
+  padding: 0.6rem;
+  border-radius: var(--border-radius-sm);
+  text-align: center;
+  font-family: var(--font-japanese);
+  font-size: 0.95rem;
+  margin: 0.8rem 0;
+  color: var(--text-main);
+}
+
+.danger-formula-part {
+  font-weight: 700;
+  color: #e63946;
+}
+
+.danger-formula-verb {
+  font-weight: 700;
+  border-bottom: 2px solid #e63946;
+}
+
+.ok-ng-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.ok-box, .ng-box {
+  padding: 0.5rem;
+  border-radius: var(--border-radius-sm);
+  text-align: center;
+  font-family: var(--font-japanese);
+  font-size: 0.8rem;
+}
+
+.ng-box {
+  background-color: #ffe3e3;
+  color: #c92a2a;
+}
+
+.ok-box {
+  background-color: #e6fcf5;
+  color: #087f5b;
+}
+
+/* ==========================================================================
+   SLIDE 15: MASTER REVISION SPREADSHEET
+   ========================================================================== */
+
+.master-table-container {
+  overflow-y: auto;
+  max-height: 480px; /* Interactive scrolling in slide mode */
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+}
+
+/* Scrollbar adjustment for screen view */
+.master-table-container::-webkit-scrollbar {
+  width: 8px;
+}
+.master-table-container::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+.master-table-container::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+
+.master-vocab-table th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1px 0 var(--border-color);
+}
+
+.cat-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: #ffffff;
+  display: inline-block;
+}
+
+.pill-time { background-color: #e2711d; }
+.pill-freq { background-color: #4361ee; }
+.pill-degree { background-color: #7209b7; }
+.pill-compare { background-color: #10b981; }
+.pill-quantity { background-color: #d97706; }
+.pill-indef { background-color: #db2777; }
+.pill-connector { background-color: #4f46e5; }
+.pill-highfreq { background-color: #0284c7; }
+
+/* Filter Hidden Rows style (used by search filter) */
+.row-hidden {
+  display: none !important;
+}
+
+/* ==========================================================================
+   GRAMMAR MASTER GUIDE
+   ========================================================================== */
+.grammar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  .grammar-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.grammar-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.grammar-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.grammar-pattern {
+  font-family: var(--font-japanese);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+}
+
+.grammar-meaning {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.grammar-structure {
+  background-color: var(--bg-table-header);
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--border-radius-sm);
+  font-family: monospace;
+  font-size: 0.85rem;
+  margin: 1rem 0;
+  color: var(--text-main);
+}
+
+.grammar-examples {
+  flex-grow: 1;
+}
+
+.grammar-example {
+  margin-bottom: 0.8rem;
+}
+
+.grammar-ex-jp {
+  font-family: var(--font-japanese);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.grammar-ex-en {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.grammar-notes {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--border-color);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   DAILY CONVERSATION EXPRESSIONS
+   ========================================================================== */
+.conv-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .conv-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .conv-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.conv-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.conv-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0; width: 4px;
+  background-color: var(--accent);
+}
+
+.conv-jp {
+  font-family: var(--font-japanese);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.1rem;
+}
+
+.conv-ro {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.conv-en {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.conv-context {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background-color: var(--bg-table-header);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   PRACTICE QUIZZES
+   ========================================================================== */
+.practice-section {
+  background-color: var(--bg-table-header);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border: 1px dashed var(--border-color);
+}
+
+.practice-title {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.practice-question {
+  background-color: var(--bg-card);
+  border-radius: var(--border-radius-sm);
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.pq-text {
+  font-family: var(--font-japanese);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.practice-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.practice-option {
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-japanese);
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.practice-option:hover {
+  border-color: var(--primary);
+}
+
+.practice-option.selected {
+  font-weight: 700;
+}
+
+.practice-option.correct {
+  background-color: #e6fcf5;
+  border-color: #087f5b;
+  color: #087f5b;
+}
+
+.practice-option.incorrect {
+  background-color: #ffe3e3;
+  border-color: #c92a2a;
+  color: #c92a2a;
+}
+
+.practice-explanation {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background-color: var(--accent-light);
+  border-left: 3px solid var(--primary);
+  font-size: 0.85rem;
+  color: var(--text-main);
+  display: none;
+}
+
+.practice-explanation.show {
+  display: block;
+}
+
+/* Print/PDF mode overrides for practice questions */
+.pdf-mode .practice-explanation {
+  display: block !important;
+}
+.pdf-mode .practice-option[data-correct] {
+  background-color: #e6fcf5 !important;
+  border-color: #087f5b !important;
+  color: #087f5b !important;
+  font-weight: 700 !important;
+}
+.pdf-mode .practice-option[data-correct]::after {
+  content: ' (Correct Answer)';
+  font-size: 0.75rem;
+}
+
+@media print {
+  .practice-explanation {
+    display: block !important;
+  }
+  .practice-option[data-correct] {
+    background-color: #e6fcf5 !important;
+    border-color: #087f5b !important;
+    color: #087f5b !important;
+    font-weight: 700 !important;
+  }
+  .practice-option[data-correct]::after {
+    content: ' (Correct Answer)';
+    font-size: 0.75rem;
+  }
+}
+
+/* ==========================================================================
+   DEDICATED PDF / PRINT / REVISION GUIDE VIEW MODE
+   ========================================================================== */
+
+/* .pdf-mode turns the slideshow container into a document style layout */
+.pdf-mode {
+  --bg-app: #ffffff !important;
+}
+
+.pdf-mode .slide-progress-bar {
+  display: none !important;
+}
+
+.pdf-mode .presentation-container {
+  margin: 120px auto 4rem auto !important;
+  max-width: 900px !important;
+  padding: 0 1rem !important;
+}
+
+.pdf-mode .slide {
+  display: flex !important;
+  opacity: 1 !important;
+  transform: none !important;
+  min-height: auto !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  margin-bottom: 3.5rem !important;
+  box-shadow: none !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 2.5rem !important;
+  background-color: #ffffff !important;
+  page-break-after: always;
+  break-after: page;
+}
+
+.pdf-mode .master-table-container {
+  max-height: none !important; /* Remove internal scroll heights */
+  overflow: visible !important;
+}
+
+.pdf-mode .vocab-table {
+  overflow: visible !important;
+}
+
+.pdf-mode .vocab-table tbody {
+  overflow: visible !important;
+}
+
+.pdf-mode .vocab-row {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.pdf-mode .traps-grid,
+.pdf-mode .split-tables-container,
+.pdf-mode .kosado-grid,
+.pdf-mode .comparison-rules-grid,
+.pdf-mode .intro-grid {
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+/* Adjust page break details */
+.pdf-mode h2, .pdf-mode h3 {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+/* ==========================================================================
+   PRINT STYLESHEET (AUTOMATIC OVERRIDE FOR BROWSER PRINTING)
+   ========================================================================== */
+
+@media print {
+  /* Setup page settings */
+  @page {
+    size: A4 portrait;
+    margin: 15mm 10mm 15mm 10mm;
+  }
+  
+  html, body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important; /* Native print text scaling */
+  }
+
+  /* Force background colors to print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide interactive/system elements */
+  .no-print, 
+  .app-header, 
+  .slide-progress-bar,
+  .title-footer-tips {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Expand presentation spacing */
+  .presentation-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Convert all slides into sequential pages */
+  .slide {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: none !important;
+    min-height: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 0 3rem 0 !important;
+    padding: 2rem !important;
+    box-shadow: none !important;
+    border: 1px solid #cccccc !important;
+    background-color: #ffffff !important;
+    
+    /* Native page breaking */
+    page-break-before: always !important;
+    page-break-inside: avoid !important;
+    break-before: page !important;
+    break-inside: avoid !important;
+  }
+
+  /* Title slide exception - starts at page 1, don't double break */
+  #slide-1 {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+  }
+
+  /* Expand all internal components and remove scrollbars */
+  .master-table-container,
+  .table-container {
+    max-height: none !important;
+    overflow: visible !important;
+    border: 1px solid #000000 !important;
+  }
+
+  .vocab-table {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .vocab-table th {
+    background-color: #f0f0f0 !important;
+    color: #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+  }
+
+  .vocab-table td {
+    border-bottom: 1px solid #cccccc !important;
+    color: #000000 !important;
+  }
+
+  .vocab-row {
+    background-color: transparent !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .vocab-row:nth-child(even) {
+    background-color: #f9f9f9 !important;
+  }
+
+  .jp-col {
+    color: #000000 !important;
+    font-weight: bold !important;
+  }
+
+  .example-col {
+    color: #000000 !important;
+  }
+
+  .example-col .translation {
+    color: #444444 !important;
+  }
+
+  /* Make sure flex grids don't overlap or crop */
+  .traps-grid,
+  .split-tables-container,
+  .kosado-grid,
+  .comparison-rules-grid,
+  .intro-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem !important;
+    overflow: visible !important;
+    max-height: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Adjust grids that need full-width elements */
+  .kosado-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  /* If page is thin, make kosado grid 2x2 for printing */
+  @media (max-width: 600px) {
+    .kosado-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+  }
+
+  /* Avoid headers breaking separately from text */
+  h2, h3, h4 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (FOR DIGITAL SCREENS)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+  .kosado-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 0 1rem;
+  }
+  .search-container {
+    width: 200px;
+  }
+  .btn-text {
+    display: none; /* Hide text, keep icons on small screens */
+  }
+  .slide {
+    padding: 1.5rem;
+  }
+  .main-title {
+    font-size: 2rem;
+  }
+  .main-subtitle {
+    font-size: 1.1rem;
+  }
+  .comparison-rules-grid,
+  .split-tables-container,
+  .traps-grid {
+    grid-template-columns: 1fr;
+  }
+  .formula-banner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    display: none; /* Hide search bar entirely on very small mobile, rely on filter in revision mode */
+  }
+  .kosado-grid {
+    grid-template-columns: 1fr;
+  }
+  .logo-title {
+    font-size: 0.9rem;
+  }
+}
