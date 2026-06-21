@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Ultimate Japanese Learning Ecosystem</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ultimate Japanese Learning Ecosystem</title><style>
     :root {
       --bg: #0F172A;
       --surface: #1E293B;
@@ -307,6 +307,21 @@
             .sidebar { width: 230px; }
             .main-content { margin-left: 230px; }
         }
+
+        @media (max-width: 768px) {
+            .layout { flex-direction: column; }
+            .sidebar { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+            .sidebar-footer { position: relative; width: 100%; border-top: none; padding-top: 0; }
+            .main-content { margin-left: 0; padding: 20px 15px; }
+            .kanji-grid { grid-template-columns: 1fr; }
+            .kc-header { flex-direction: column; align-items: center; text-align: center; }
+            .kc-char-box { margin-right: 0; margin-bottom: 16px; }
+            .kc-readings { justify-content: center; }
+            .card { padding: 16px; }
+            .grammar-search-grid { grid-template-columns: 1fr; }
+            .table-wrapper { font-size: 13px; }
+            th, td { padding: 8px 10px; }
+        }
     
     @media print {
         .sidebar { display: none; }
@@ -329,7 +344,728 @@ Difference between 暑い and 熱い?</div><div class="quiz-opts"><button data-c
 Which is NOT a use of 〜ています?</div><div class="quiz-opts"><button data-correct="false">A. Current ongoing action (今、食べています)</button><button data-correct="false">B. Habitual action (毎日走っています)</button><button data-correct="true">C. Future action (明日行っています)</button><button data-correct="false">D. Resulting state (結婚しています)</button></div><div class="quiz-exp"><strong style="color:#10B981">✓ Correct Answer: C</strong><br><br>〜ています is NOT used for future actions. Future is expressed with the plain ます-form. ています has 4 uses: current action, habit, resulting state, occupation.</div></div><div class="quiz-box" id="vocab_test_1-q7" data-test-id="vocab_test_1" data-score-display="score-display-vocab_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「〜たことがあります」 means?</div><div class="quiz-opts"><button data-correct="false">A. I am doing ~</button><button data-correct="false">B. I will do ~</button><button data-correct="true">C. I have done ~ before (experience)</button><button data-correct="false">D. I must do ~</button></div><div class="quiz-exp"><strong style="color:#10B981">✓ Correct Answer: C</strong><br><br>〜たことがあります = 'I have ~ before' (experience). Uses TA-FORM + こと + が + あります. 日本に行ったことがあります = I have been to Japan before.</div></div></section><section id="test-kanji_test_1" style="margin-bottom:60px"><h2 style="color:#8B5CF6;border-bottom-color:#8B5CF6">Kanji Reading</h2><p style="color:var(--text-3);margin-bottom:24px">Test your JLPT N5 kanji reading ability.</p><div style="background:var(--surface);border:2px solid #8B5CF6;border-radius:10px;padding:14px 20px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between"><span style="font-size:15px;font-weight:700;color:var(--text-1)">Score</span><span style="font-size:24px;font-weight:800;color:#8B5CF6" id="score-display-kanji_test_1">0 / 8</span></div><div class="quiz-box" id="kanji_test_1-q0" data-test-id="kanji_test_1" data-score-display="score-display-kanji_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「山」の読み方は？
 How do you read 山?</div><div class="quiz-opts"><button data-correct="false">A. かわ</button><button data-correct="true">B. やま</button><button data-correct="false">C. うみ</button><button data-correct="false">D. はな</button></div><div class="quiz-exp"><strong style="color:#8B5CF6">✓ Correct Answer: B</strong><br><br>山 = やま (yama) = Mountain. ON reading: さん (san) as in 富士山 (ふじさん). KUN reading: やま used alone.</div></div><div class="quiz-box" id="kanji_test_1-q1" data-test-id="kanji_test_1" data-score-display="score-display-kanji_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「日曜日」の読み方は？</div><div class="quiz-opts"><button data-correct="false">A. げつようび</button><button data-correct="true">B. にちようび</button><button data-correct="false">C. かようび</button><button data-correct="false">D. もくようび</button></div><div class="quiz-exp"><strong style="color:#8B5CF6">✓ Correct Answer: B</strong><br><br>日曜日 = にちようび (nichiyoubi) = Sunday. 日 = sun/day, 曜 = day of week, 日 = day.</div></div><div class="quiz-box" id="kanji_test_1-q2" data-test-id="kanji_test_1" data-score-display="score-display-kanji_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「百」は何ですか？</div><div class="quiz-opts"><button data-correct="false">A. 10</button><button data-correct="false">B. 1,000</button><button data-correct="true">C. 100</button><button data-correct="false">D. 10,000</button></div><div class="quiz-exp"><strong style="color:#8B5CF6">✓ Correct Answer: C</strong><br><br>百 (ひゃく - hyaku) = 100. 千 (せん - sen) = 1,000. 万 (まん - man) = 10,000.</div></div><div class="quiz-box" id="kanji_test_1-q3" data-test-id="kanji_test_1" data-score-display="score-display-kanji_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「食べる」の kanji の読み方は？</div><div class="quiz-opts"><button data-correct="false">A. のむ</button><button data-correct="false">B. かく</button><button data-correct="true">C. たべる</button><button data-correct="false">D. みる</button></div><div class="quiz-exp"><strong style="color:#8B5CF6">✓ Correct Answer: C</strong><br><br>食べる = たべる (taberu) = To eat. The kanji 食 has ON reading: ショク (shoku) as in 食事 (meal), 食堂 (cafeteria).</div></div><div class="quiz-box" id="kanji_test_1-q4" data-test-id="kanji_test_1" data-score-display="score-display-kanji_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「何時に起きますか」
 What does this sentence ask?</div><div class="quiz-opts"><button data-correct="false">A. Where do you wake up?</button><button data-correct="true">B. What time do you wake up?</button><button data-correct="false">C. When did you sleep?</button><button data-correct="false">D. Who woke up?</button></div><div class="quiz-exp"><strong style="color:#8B5CF6">✓ Correct Answer: B</strong><br><br>何時 (なんじ - nanji) = What time. 起きます = wake up. So: What time do you wake up? 何時 uses 何 (what) + 時 (o'clock).</div></div><div class="quiz-box" id="kanji_test_1-q5" data-test-id="kanji_test_1" data-score-display="score-display-kanji_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「大学生」を正しく読んでください。</div><div class="quiz-opts"><button data-correct="false">A. ちゅうがくせい</button><button data-correct="false">B. しょうがくせい</button><button data-correct="true">C. だいがくせい</button><button data-correct="false">D. こうこうせい</button></div><div class="quiz-exp"><strong style="color:#8B5CF6">✓ Correct Answer: C</strong><br><br>大学生 = だいがくせい (daigakusei) = University student. 大 (大きい = big) + 学 (gaku = study) + 生 (sei = person/student).</div></div><div class="quiz-box" id="kanji_test_1-q6" data-test-id="kanji_test_1" data-score-display="score-display-kanji_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「右」と「左」— which means RIGHT?</div><div class="quiz-opts"><button data-correct="false">A. 左</button><button data-correct="true">B. 右</button><button data-correct="false">C. Both are the same</button><button data-correct="false">D. Neither</button></div><div class="quiz-exp"><strong style="color:#8B5CF6">✓ Correct Answer: B</strong><br><br>右 (みぎ - migi) = Right. 左 (ひだり - hidari) = Left. Memory trick: 右 has a shorter left stroke = right is shorter stroke side.</div></div><div class="quiz-box" id="kanji_test_1-q7" data-test-id="kanji_test_1" data-score-display="score-display-kanji_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「今月」はいつですか？</div><div class="quiz-opts"><button data-correct="false">A. Last month</button><button data-correct="false">B. Next month</button><button data-correct="true">C. This month</button><button data-correct="false">D. Every month</button></div><div class="quiz-exp"><strong style="color:#8B5CF6">✓ Correct Answer: C</strong><br><br>今月 (こんげつ - kongetsu) = This month. 今 (ima/kon = now/this) + 月 (tsuki/getsu = month). 先月 = last month, 来月 = next month.</div></div></section><section id="test-sentence_test_1" style="margin-bottom:60px"><h2 style="color:#F59E0B;border-bottom-color:#F59E0B">Sentence Comprehension</h2><p style="color:var(--text-3);margin-bottom:24px">Choose the correct sentence or fill in the blank — N5 level comprehension.</p><div style="background:var(--surface);border:2px solid #F59E0B;border-radius:10px;padding:14px 20px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between"><span style="font-size:15px;font-weight:700;color:var(--text-1)">Score</span><span style="font-size:24px;font-weight:800;color:#F59E0B" id="score-display-sentence_test_1">0 / 8</span></div><div class="quiz-box" id="sentence_test_1-q0" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">Which sentence is CORRECT?</div><div class="quiz-opts"><button data-correct="true">A. 私は日本語が好きです。</button><button data-correct="false">B. 私は日本語を好きです。</button><button data-correct="false">C. 私は日本語に好きです。</button><button data-correct="false">D. 私は日本語で好きです。</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: A</strong><br><br>好き (like) requires the particle が for the thing you like. 私は日本語が好きです = I like Japanese. NEVER を with 好き.</div></div><div class="quiz-box" id="sentence_test_1-q1" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「水しか飲みません」の意味は？</div><div class="quiz-opts"><button data-correct="false">A. I drink only water (neutral)</button><button data-correct="true">B. I drink only water (implying nothing else, perhaps disappointment)</button><button data-correct="false">C. I don't drink water</button><button data-correct="false">D. I also drink water</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: B</strong><br><br>しか〜ない = 'nothing but, only' with an implication of insufficiency or exclusivity. It ALWAYS requires a negative verb. Contrast: 水だけ飲みます (neutral 'only water').</div></div><div class="quiz-box" id="sentence_test_1-q2" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">Choose the sentence with the correct verb form:
-友達に本を___もらいました。</div><div class="quiz-opts"><button data-correct="true">A. あげて</button><button data-correct="false">B. くれて</button><button data-correct="false">C. もらって</button><button data-correct="false">D. かして</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: A</strong><br><br>Wait — this is actually a tricky question! 友達に本をあげてもらいました = I had my friend give me a book (I received the favor of giving). The te-form of あげる + もらいます = to have someone do something for you.</div></div><div class="quiz-box" id="sentence_test_1-q3" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「田中さんは来ないかもしれません」means?</div><div class="quiz-opts"><button data-correct="false">A. Tanaka-san will definitely come</button><button data-correct="false">B. Tanaka-san probably won't come (certain)</button><button data-correct="true">C. Tanaka-san might not come (uncertain)</button><button data-correct="false">D. Tanaka-san must not come</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: C</strong><br><br>かもしれません = 'might / may' expressing possibility and uncertainty. It's less certain than でしょう. 来ない + かもしれません = might not come.</div></div><div class="quiz-box" id="sentence_test_1-q4" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">Which particle correctly completes: バス＿＿学校まで行きます。</div><div class="quiz-opts"><button data-correct="false">A. を</button><button data-correct="false">B. に</button><button data-correct="true">C. で</button><button data-correct="false">D. が</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: C</strong><br><br>で marks the MEANS OF TRANSPORTATION. バスで = by bus. バスを is wrong (を is for direct object/path walked). バスに = on the bus (location), not means.</div></div><div class="quiz-box" id="sentence_test_1-q5" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「毎朝、ジョギングしています」means?</div><div class="quiz-opts"><button data-correct="false">A. I am jogging right now</button><button data-correct="true">B. I jog every morning (habitual)</button><button data-correct="false">C. I jogged this morning (past)</button><button data-correct="false">D. I will jog every morning</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: B</strong><br><br>毎朝 (every morning) + 〜ています = habitual action. When 〜ています is used with frequency words like 毎日, 毎朝, it means a HABIT, not a current ongoing action.</div></div><div class="quiz-box" id="sentence_test_1-q6" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">Pick the correct sentence for 'I want to go to Japan':</div><div class="quiz-opts"><button data-correct="true">A. 日本へ行きたいです。</button><button data-correct="false">B. 日本へ行きほしいです。</button><button data-correct="false">C. 日本へ行くほしいです。</button><button data-correct="false">D. 日本へ行きたがります。</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: A</strong><br><br>たいです (want to DO) = masu-stem + たいです. 行く → 行き + たいです = want to go. ほしいです is for THINGS (nouns), not actions. たがります is for third-person desire.</div></div><div class="quiz-box" id="sentence_test_1-q7" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「宿題をしたあとで、ゲームをします」— What happens first?</div><div class="quiz-opts"><button data-correct="false">A. Playing games</button><button data-correct="true">B. Doing homework</button><button data-correct="false">C. Both at the same time</button><button data-correct="false">D. Neither clearly stated</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: B</strong><br><br>〜たあとで (after doing ~) = た-form + あとで. The action before あとで happens FIRST. 宿題をしたあとで = after doing homework → then games.</div></div></section></section></main></div><script>
+友達に本を___もらいました。</div><div class="quiz-opts"><button data-correct="true">A. あげて</button><button data-correct="false">B. くれて</button><button data-correct="false">C. もらって</button><button data-correct="false">D. かして</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: A</strong><br><br>Wait — this is actually a tricky question! 友達に本をあげてもらいました = I had my friend give me a book (I received the favor of giving). The te-form of あげる + もらいます = to have someone do something for you.</div></div><div class="quiz-box" id="sentence_test_1-q3" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「田中さんは来ないかもしれません」means?</div><div class="quiz-opts"><button data-correct="false">A. Tanaka-san will definitely come</button><button data-correct="false">B. Tanaka-san probably won't come (certain)</button><button data-correct="true">C. Tanaka-san might not come (uncertain)</button><button data-correct="false">D. Tanaka-san must not come</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: C</strong><br><br>かもしれません = 'might / may' expressing possibility and uncertainty. It's less certain than でしょう. 来ない + かもしれません = might not come.</div></div><div class="quiz-box" id="sentence_test_1-q4" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">Which particle correctly completes: バス＿＿学校まで行きます。</div><div class="quiz-opts"><button data-correct="false">A. を</button><button data-correct="false">B. に</button><button data-correct="true">C. で</button><button data-correct="false">D. が</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: C</strong><br><br>で marks the MEANS OF TRANSPORTATION. バスで = by bus. バスを is wrong (を is for direct object/path walked). バスに = on the bus (location), not means.</div></div><div class="quiz-box" id="sentence_test_1-q5" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「毎朝、ジョギングしています」means?</div><div class="quiz-opts"><button data-correct="false">A. I am jogging right now</button><button data-correct="true">B. I jog every morning (habitual)</button><button data-correct="false">C. I jogged this morning (past)</button><button data-correct="false">D. I will jog every morning</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: B</strong><br><br>毎朝 (every morning) + 〜ています = habitual action. When 〜ています is used with frequency words like 毎日, 毎朝, it means a HABIT, not a current ongoing action.</div></div><div class="quiz-box" id="sentence_test_1-q6" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">Pick the correct sentence for 'I want to go to Japan':</div><div class="quiz-opts"><button data-correct="true">A. 日本へ行きたいです。</button><button data-correct="false">B. 日本へ行きほしいです。</button><button data-correct="false">C. 日本へ行くほしいです。</button><button data-correct="false">D. 日本へ行きたがります。</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: A</strong><br><br>たいです (want to DO) = masu-stem + たいです. 行く → 行き + たいです = want to go. ほしいです is for THINGS (nouns), not actions. たがります is for third-person desire.</div></div><div class="quiz-box" id="sentence_test_1-q7" data-test-id="sentence_test_1" data-score-display="score-display-sentence_test_1" data-total="8"><div class="quiz-q" style="white-space:pre-line;font-size:15px">「宿題をしたあとで、ゲームをします」— What happens first?</div><div class="quiz-opts"><button data-correct="false">A. Playing games</button><button data-correct="true">B. Doing homework</button><button data-correct="false">C. Both at the same time</button><button data-correct="false">D. Neither clearly stated</button></div><div class="quiz-exp"><strong style="color:#F59E0B">✓ Correct Answer: B</strong><br><br>〜たあとで (after doing ~) = た-form + あとで. The action before あとで happens FIRST. 宿題をしたあとで = after doing homework → then games.</div></div></section></section>
+    <!-- SLIDE 14: GRAMMAR START -->
+
+    <section class="slide" id="slide-14" data-slide-index="14">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 1</div>
+        <h2>State & Being (状態・存在)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜です / 〜ではありません</div>
+              <div class="grammar-meaning">To be / Not to be (Present)</div>
+            </div>
+            <div class="grammar-structure">[Noun/Na-Adj] です<br>[Noun/Na-Adj] ではありません</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">私は学生です。</div><div class="grammar-ex-en">I am a student.</div></div><div class="grammar-example"><div class="grammar-ex-jp">彼は先生ではありません。</div><div class="grammar-ex-en">He is not a teacher.</div></div>
+            </div>
+            <div class="grammar-notes">💡 ではありません is formal. じゃありません is used in daily speaking.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜でした / 〜ではありませんでした</div>
+              <div class="grammar-meaning">Was / Was not (Past)</div>
+            </div>
+            <div class="grammar-structure">[Noun/Na-Adj] でした<br>[Noun/Na-Adj] ではありませんでした</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">きのうは雨でした。</div><div class="grammar-ex-en">It was raining yesterday.</div></div><div class="grammar-example"><div class="grammar-ex-jp">テストは簡単ではありませんでした。</div><div class="grammar-ex-en">The test was not easy.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Past tense of the copula. Watch out for I-adjectives which conjugate differently (〜かったです).</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜があります / 〜います</div>
+              <div class="grammar-meaning">There is / To have (Existence)</div>
+            </div>
+            <div class="grammar-structure">[Place] に [Thing] があります<br>[Place] に [Person/Animal] がいます</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">机の上に本があります。</div><div class="grammar-ex-en">There is a book on the desk.</div></div><div class="grammar-example"><div class="grammar-ex-jp">あそこに犬がいます。</div><div class="grammar-ex-en">There is a dog over there.</div></div>
+            </div>
+            <div class="grammar-notes">💡 あります is for inanimate objects. います is for living, moving things.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-15" data-slide-index="15">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 2</div>
+        <h2>Movement & Requests (移動・依頼)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜へ行きます / 〜に行きます</div>
+              <div class="grammar-meaning">Go to ~</div>
+            </div>
+            <div class="grammar-structure">[Place] へ/に 行きます / 来ます / 帰ります</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">明日、東京へ行きます。</div><div class="grammar-ex-en">I will go to Tokyo tomorrow.</div></div><div class="grammar-example"><div class="grammar-ex-jp">うちへ帰ります。</div><div class="grammar-ex-en">I will return home.</div></div>
+            </div>
+            <div class="grammar-notes">💡 へ emphasizes direction, に emphasizes destination. Both are mostly interchangeable for N5.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜をください</div>
+              <div class="grammar-meaning">Please give me ~</div>
+            </div>
+            <div class="grammar-structure">[Noun] をください</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">水をください。</div><div class="grammar-ex-en">Please give me water.</div></div><div class="grammar-example"><div class="grammar-ex-jp">りんごを３つください。</div><div class="grammar-ex-en">Please give me three apples.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Used when ordering at restaurants or asking for items in a store.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜てください</div>
+              <div class="grammar-meaning">Please do ~</div>
+            </div>
+            <div class="grammar-structure">[Verb て-form] ください</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">ちょっと待ってください。</div><div class="grammar-ex-en">Please wait a moment.</div></div><div class="grammar-example"><div class="grammar-ex-jp">ここに名前を書いてください。</div><div class="grammar-ex-en">Please write your name here.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Standard polite request. Requires mastering the Verb て-form.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-16" data-slide-index="16">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 3</div>
+        <h2>Suggestions & Permissions (提案・許可)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜ましょう / 〜ませんか</div>
+              <div class="grammar-meaning">Let's ~ / Won't we ~?</div>
+            </div>
+            <div class="grammar-structure">[Verb stem] ましょう<br>[Verb stem] ませんか</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">一緒に昼ご飯を食べましょう。</div><div class="grammar-ex-en">Let's eat lunch together.</div></div><div class="grammar-example"><div class="grammar-ex-jp">コーヒーを飲みませんか。</div><div class="grammar-ex-en">Won't you drink some coffee?</div></div>
+            </div>
+            <div class="grammar-notes">💡 ませんか is softer and more polite as it gives the listener room to refuse.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜てもいいです</div>
+              <div class="grammar-meaning">May I ~ / It is okay to ~</div>
+            </div>
+            <div class="grammar-structure">[Verb て-form] もいいです</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">ここで写真を撮ってもいいですか。</div><div class="grammar-ex-en">May I take a picture here?</div></div><div class="grammar-example"><div class="grammar-ex-jp">このペンを使ってもいいです。</div><div class="grammar-ex-en">You may use this pen.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Often used as a question to ask for permission.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜てはいけません</div>
+              <div class="grammar-meaning">You must not ~</div>
+            </div>
+            <div class="grammar-structure">[Verb て-form] はいけません</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">ここでタバコを吸ってはいけません。</div><div class="grammar-ex-en">You must not smoke here.</div></div><div class="grammar-example"><div class="grammar-ex-jp">病院で電話をしてはいけません。</div><div class="grammar-ex-en">You must not talk on the phone in the hospital.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Strong prohibition. Often seen on signs or rules.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-17" data-slide-index="17">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 4</div>
+        <h2>Obligation & State (義務・状態)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜なければなりません</div>
+              <div class="grammar-meaning">Must do ~ / Have to ~</div>
+            </div>
+            <div class="grammar-structure">[Verb ない-form, drop い] ければなりません</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">明日、早く起きなければなりません。</div><div class="grammar-ex-en">I must wake up early tomorrow.</div></div><div class="grammar-example"><div class="grammar-ex-jp">薬を飲まなければなりません。</div><div class="grammar-ex-en">I must take medicine.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Double negative construction literally meaning 'if you don't do, it's not okay'.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜なくてもいいです</div>
+              <div class="grammar-meaning">Don't have to ~</div>
+            </div>
+            <div class="grammar-structure">[Verb ない-form, drop い] くてもいいです</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">明日は学校へ行かなくてもいいです。</div><div class="grammar-ex-en">I don't have to go to school tomorrow.</div></div>
+            </div>
+            <div class="grammar-notes">💡 The exact opposite of なければなりません.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜ています</div>
+              <div class="grammar-meaning">Currently doing ~ / State of being</div>
+            </div>
+            <div class="grammar-structure">[Verb て-form] います</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">今、本を読んでいます。</div><div class="grammar-ex-en">I am reading a book right now.</div></div><div class="grammar-example"><div class="grammar-ex-jp">私は結婚しています。</div><div class="grammar-ex-en">I am married. (State)</div></div>
+            </div>
+            <div class="grammar-notes">💡 Can mean an action in progress (I am eating) OR a continuous state (I live in Tokyo).</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-18" data-slide-index="18">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 5</div>
+        <h2>Desire & Ability (願望・可能)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜たいです / 〜ほしいです</div>
+              <div class="grammar-meaning">Want to do / Want a thing</div>
+            </div>
+            <div class="grammar-structure">[Verb stem] たいです<br>[Noun] がほしいです</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">日本へ行きたいです。</div><div class="grammar-ex-en">I want to go to Japan.</div></div><div class="grammar-example"><div class="grammar-ex-jp">新しい車がほしいです。</div><div class="grammar-ex-en">I want a new car.</div></div>
+            </div>
+            <div class="grammar-notes">💡 たい attaches to verbs. ほしい acts like an adjective taking the object with が.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜ことができます</div>
+              <div class="grammar-meaning">Can do ~ / Ability</div>
+            </div>
+            <div class="grammar-structure">[Verb Dictionary Form] ことができます</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">私はピアノを弾くことができます。</div><div class="grammar-ex-en">I can play the piano.</div></div><div class="grammar-example"><div class="grammar-ex-jp">ここで切符を買うことができます。</div><div class="grammar-ex-en">You can buy a ticket here.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Formal way to express potential/ability in N5.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-19" data-slide-index="19">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 6</div>
+        <h2>Thoughts & Explanations (思考・説明)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜から / 〜ので</div>
+              <div class="grammar-meaning">Because ~</div>
+            </div>
+            <div class="grammar-structure">[Reason Phrase] から/ので、[Result]</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">雨が降っているから、行きません。</div><div class="grammar-ex-en">Because it's raining, I won't go.</div></div><div class="grammar-example"><div class="grammar-ex-jp">時間がないので、急いでください。</div><div class="grammar-ex-en">Because there's no time, please hurry.</div></div>
+            </div>
+            <div class="grammar-notes">💡 ので is slightly more formal and objective than から.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜と思います</div>
+              <div class="grammar-meaning">I think that ~</div>
+            </div>
+            <div class="grammar-structure">[Plain Form Verb/Adj] と思います</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">明日は晴れると思います。</div><div class="grammar-ex-en">I think it will be sunny tomorrow.</div></div><div class="grammar-example"><div class="grammar-ex-jp">この映画は面白いと思います。</div><div class="grammar-ex-en">I think this movie is interesting.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Before と, you must use the plain/casual form (e.g., だ for nouns/na-adjectives).</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜んです</div>
+              <div class="grammar-meaning">Explanatory tone / Seeking explanation</div>
+            </div>
+            <div class="grammar-structure">[Plain Form] んです / のです</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">どうしたんですか。</div><div class="grammar-ex-en">What happened? / What's wrong?</div></div><div class="grammar-example"><div class="grammar-ex-jp">頭が痛いんです。</div><div class="grammar-ex-en">It's that my head hurts.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Used heavily in speech to explain a situation, reason, or ask for a reason.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-20" data-slide-index="20">
+      <div class="slide-header">
+        <div class="slide-badge">Grammar Guide 7</div>
+        <h2>Time Relations (時間関係)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grammar-grid">
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜前に / 〜後で</div>
+              <div class="grammar-meaning">Before ~ / After ~</div>
+            </div>
+            <div class="grammar-structure">[Dict Verb/Nounの] 前に<br>[た-Form Verb/Nounの] 後で</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">寝る前に、本を読みます。</div><div class="grammar-ex-en">Before sleeping, I read a book.</div></div><div class="grammar-example"><div class="grammar-ex-jp">授業の後で、映画を見ます。</div><div class="grammar-ex-en">After class, I will watch a movie.</div></div>
+            </div>
+            <div class="grammar-notes">💡 前に takes dictionary form. 後で takes た(past) form.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜てから</div>
+              <div class="grammar-meaning">After doing ~ (Sequential)</div>
+            </div>
+            <div class="grammar-structure">[Verb て-form] から</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">手を洗ってから、ご飯を食べます。</div><div class="grammar-ex-en">After washing hands, I eat dinner.</div></div>
+            </div>
+            <div class="grammar-notes">💡 Indicates action B happens immediately or sequentially after action A.</div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-header">
+              <div class="grammar-pattern">〜ながら</div>
+              <div class="grammar-meaning">While doing ~</div>
+            </div>
+            <div class="grammar-structure">[Verb stem] ながら</div>
+            <div class="grammar-examples">
+<div class="grammar-example"><div class="grammar-ex-jp">音楽を聞きながら、勉強します。</div><div class="grammar-ex-en">I study while listening to music.</div></div>
+            </div>
+            <div class="grammar-notes">💡 The main action is the second verb.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-21" data-slide-index="21">
+      <div class="slide-header">
+        <div class="slide-badge">Practice</div>
+        <h2>Grammar Practice Questions</h2>
+      </div>
+      <div class="slide-body">
+<div class="practice-section"><h3 class="practice-title"><i data-lucide="check-circle"></i> JLPT N5 Style Grammar Quiz</h3><div class="practice-question"><div class="pq-text">１．あした、えいがを＿＿＿＿か。</div><div class="practice-options"><button class="practice-option" data-correct>A. みます</button><button class="practice-option">B. みました</button><button class="practice-option">C. みて</button></div><div class="practice-explanation"><strong>Answer: A. みます</strong><br>Tomorrow (あした) indicates future tense.</div></div><div class="practice-question"><div class="pq-text">２．ここは びょういんです。タバコを ＿＿＿＿はいけません。</div><div class="practice-options"><button class="practice-option">A. すいます</button><button class="practice-option">B. すう</button><button class="practice-option" data-correct>C. すって</button></div><div class="practice-explanation"><strong>Answer: C. すって</strong><br>〜てはいけません (must not) requires the Te-form.</div></div><div class="practice-question"><div class="pq-text">３．にく＿＿＿さかな＿＿＿どちらが好きですか。</div><div class="practice-options"><button class="practice-option" data-correct>A. と / と</button><button class="practice-option">B. や / や</button><button class="practice-option">C. に / に</button></div><div class="practice-explanation"><strong>Answer: A. と / と</strong><br>The pattern is Aと Bと どちらが〜 (Which is more... A or B?).</div></div></div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-22" data-slide-index="22">
+      <div class="slide-header">
+        <div class="slide-badge">Expressions</div>
+        <h2>Daily Conversation Expressions</h2>
+      </div>
+      <div class="slide-body">
+        <div class="conv-grid">
+
+          <div class="conv-card">
+            <div class="conv-jp">ありがとうございます</div>
+            <div class="conv-ro">Arigatou gozaimasu</div>
+            <div class="conv-en">Thank you very much</div>
+            <div class="conv-context">Polite • Anytime</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">どういたしまして</div>
+            <div class="conv-ro">Dou itashimashite</div>
+            <div class="conv-en">You're welcome</div>
+            <div class="conv-context">Polite • Reply to Thanks</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">すみません</div>
+            <div class="conv-ro">Sumimasen</div>
+            <div class="conv-en">Excuse me / I'm sorry</div>
+            <div class="conv-context">Standard • Apology/Calling attention</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">ごめんなさい</div>
+            <div class="conv-ro">Gomen nasai</div>
+            <div class="conv-en">I'm sorry</div>
+            <div class="conv-context">Casual/Standard • Apology</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">失礼します</div>
+            <div class="conv-ro">Shitsurei shimasu</div>
+            <div class="conv-en">Excuse me (entering/leaving)</div>
+            <div class="conv-context">Formal • Office/Entering room</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">よろしくお願いします</div>
+            <div class="conv-ro">Yoroshiku onegaishimasu</div>
+            <div class="conv-en">Please treat me well / Thanks in advance</div>
+            <div class="conv-context">Standard • Introductions/Requests</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">いただきます</div>
+            <div class="conv-ro">Itadakimasu</div>
+            <div class="conv-en">Let's eat (I humbly receive)</div>
+            <div class="conv-context">Standard • Before meal</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">ごちそうさまでした</div>
+            <div class="conv-ro">Gochisousama deshita</div>
+            <div class="conv-en">Thank you for the meal</div>
+            <div class="conv-context">Standard • After meal</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">お疲れさまです</div>
+            <div class="conv-ro">Otsukaresama desu</div>
+            <div class="conv-en">Good work / Thanks for your hard work</div>
+            <div class="conv-context">Workplace • Greeting coworkers</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">お先に失礼します</div>
+            <div class="conv-ro">Osakini shitsurei shimasu</div>
+            <div class="conv-en">Excuse me for leaving before you</div>
+            <div class="conv-context">Workplace • Leaving work early</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">行ってきます</div>
+            <div class="conv-ro">Ittekimasu</div>
+            <div class="conv-en">I'm leaving (and coming back)</div>
+            <div class="conv-context">Home • Leaving house</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">行ってらっしゃい</div>
+            <div class="conv-ro">Itterasshai</div>
+            <div class="conv-en">Please go and come back safely</div>
+            <div class="conv-context">Home • Reply to Ittekimasu</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">ただいま</div>
+            <div class="conv-ro">Tadaima</div>
+            <div class="conv-en">I'm home</div>
+            <div class="conv-context">Home • Returning home</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">おかえりなさい</div>
+            <div class="conv-ro">Okaerinasai</div>
+            <div class="conv-en">Welcome back</div>
+            <div class="conv-context">Home • Reply to Tadaima</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">もしもし</div>
+            <div class="conv-ro">Moshi moshi</div>
+            <div class="conv-en">Hello? (on phone)</div>
+            <div class="conv-context">Phone • Answering</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">いらっしゃいませ</div>
+            <div class="conv-ro">Irasshaimase</div>
+            <div class="conv-en">Welcome (to a store)</div>
+            <div class="conv-context">Retail • Staff greeting customer</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">おめでとうございます</div>
+            <div class="conv-ro">Omedetou gozaimasu</div>
+            <div class="conv-en">Congratulations</div>
+            <div class="conv-context">Polite • Celebration</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">お元気ですか</div>
+            <div class="conv-ro">Ogenki desu ka</div>
+            <div class="conv-en">How are you?</div>
+            <div class="conv-context">Standard • Greeting</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">はい / いいえ</div>
+            <div class="conv-ro">Hai / Iie</div>
+            <div class="conv-en">Yes / No</div>
+            <div class="conv-context">Standard</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">そうです / ちがいます</div>
+            <div class="conv-ro">Sou desu / Chigaimasu</div>
+            <div class="conv-en">That's right / That's wrong</div>
+            <div class="conv-context">Standard • Confirmation</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">わかりました</div>
+            <div class="conv-ro">Wakarimashita</div>
+            <div class="conv-en">I understand</div>
+            <div class="conv-context">Standard • Acknowledgment</div>
+          </div>
+
+          <div class="conv-card">
+            <div class="conv-jp">大丈夫です</div>
+            <div class="conv-ro">Daijoubu desu</div>
+            <div class="conv-en">It's okay / I'm fine</div>
+            <div class="conv-context">Standard • Reassurance</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-23" data-slide-index="23">
+      <div class="slide-header">
+        <div class="slide-badge">Particles</div>
+        <h2>Particles Master Table (助詞)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="table-container particle-table-container">
+          <table class="vocab-table" id="table-particles">
+            <thead>
+              <tr>
+                <th style="width: 10%">Particle</th>
+                <th style="width: 25%">Core Meaning</th>
+                <th style="width: 35%">Usage Note</th>
+                <th style="width: 30%">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">は</td>
+                <td class="meaning-col">Topic Marker</td>
+                <td class="mnemonic-col">Uses: Topic, Contrast, General Statement | Trap: は = topic</td>
+                <td class="example-col">私は学生です。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">が</td>
+                <td class="meaning-col">Subject Marker</td>
+                <td class="mnemonic-col">Uses: Subject, New Information, Like / Skill, Ability | Trap: 好き requires が</td>
+                <td class="example-col">猫がいます。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">を</td>
+                <td class="meaning-col">Direct Object Marker</td>
+                <td class="mnemonic-col">Uses: Direct Object, Thing Being Studied, Thing Being Watched, Path Traversed | Trap: Do not use を with 好きです.</td>
+                <td class="example-col">りんごを食べます。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">に</td>
+                <td class="meaning-col">Target / Point</td>
+                <td class="mnemonic-col">Uses: Time, Destination, Existence Location, Receiver | Trap: Do not use に with 今日.</td>
+                <td class="example-col">７時に起きます。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">へ</td>
+                <td class="meaning-col">Direction</td>
+                <td class="mnemonic-col">Uses: Direction, Movement | Trap: へ focuses on direction.</td>
+                <td class="example-col">東京へ行きます。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">で</td>
+                <td class="meaning-col">Place of Action / Means</td>
+                <td class="mnemonic-col">Uses: Action Location, Transportation, Tool, Language | Trap: Action location = で</td>
+                <td class="example-col">図書館で勉強します。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">と</td>
+                <td class="meaning-col">And / With</td>
+                <td class="mnemonic-col">Uses: Complete List, Together With, Quotation</td>
+                <td class="example-col">肉と魚</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">や</td>
+                <td class="meaning-col">Partial List</td>
+                <td class="mnemonic-col">Uses: A and B among others</td>
+                <td class="example-col">本やペンがあります。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">も</td>
+                <td class="meaning-col">Also</td>
+                <td class="mnemonic-col">Uses: Also, Too</td>
+                <td class="example-col">私も学生です。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">から</td>
+                <td class="meaning-col">From</td>
+                <td class="mnemonic-col">Uses: Starting Time, Starting Place, Reason</td>
+                <td class="example-col">９時からです。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">まで</td>
+                <td class="meaning-col">Until / To</td>
+                <td class="mnemonic-col">Uses: Ending Time, Ending Place</td>
+                <td class="example-col">５時までです。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">より</td>
+                <td class="meaning-col">Than</td>
+                <td class="mnemonic-col">Uses: Comparison</td>
+                <td class="example-col">父より母のほうが若いです。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">だけ</td>
+                <td class="meaning-col">Only</td>
+                <td class="mnemonic-col">Uses: Only</td>
+                <td class="example-col">水だけ飲みます。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">しか</td>
+                <td class="meaning-col">Only (with negative)</td>
+                <td class="mnemonic-col">Uses: Nothing but | Trap: しか MUST be followed by a negative verb.</td>
+                <td class="example-col">水しか飲みません。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">か</td>
+                <td class="meaning-col">Question Marker</td>
+                <td class="mnemonic-col">Uses: Question, Or</td>
+                <td class="example-col">学生ですか。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">ね</td>
+                <td class="meaning-col">Agreement Tag</td>
+                <td class="mnemonic-col">Uses: Right?</td>
+                <td class="example-col">いい天気ですね。</td>
+              </tr>
+
+              <tr class="vocab-row">
+                <td class="jp-col" style="font-size: 1.5rem;">よ</td>
+                <td class="meaning-col">Assertion Tag</td>
+                <td class="mnemonic-col">Uses: New Information</td>
+                <td class="example-col">おいしいですよ。</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-24" data-slide-index="24">
+      <div class="slide-header">
+        <div class="slide-badge">Warning</div>
+        <h2>Major Exam Traps (試験の罠)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="traps-grid">
+          <div class="trap-card">
+            <div class="trap-card-header"><h4>は (wa) vs が (ga)</h4></div>
+            <div class="trap-comparison">
+              <div class="comp-col"><span class="word-highlight">は</span><p class="desc">Topic marker. Used for known information.</p><p class="ex">私が学生です。(As for me, I am a student)</p></div>
+              <div class="comp-col border-left"><span class="word-highlight">が</span><p class="desc">Subject marker. Used for new info, or with desires/skills (好き, ほしい).</p><p class="ex">犬が好きです。(I like dogs)</p></div>
+            </div>
+          </div>
+          <div class="trap-card">
+            <div class="trap-card-header"><h4>に (ni) vs で (de)</h4></div>
+            <div class="trap-comparison">
+              <div class="comp-col"><span class="word-highlight">に</span><p class="desc">Location of EXISTENCE (います/あります).</p><p class="ex">部屋に犬がいます。(Dog is in the room)</p></div>
+              <div class="comp-col border-left"><span class="word-highlight">で</span><p class="desc">Location of ACTION (食べる/飲む).</p><p class="ex">部屋で食べます。(Eat in the room)</p></div>
+            </div>
+          </div>
+          <div class="trap-card">
+            <div class="trap-card-header"><h4>だけ (dake) vs しか (shika)</h4></div>
+            <div class="trap-comparison">
+              <div class="comp-col"><span class="word-highlight">だけ</span><p class="desc">Only. Takes positive verbs.</p><p class="ex">百円だけあります。</p></div>
+              <div class="comp-col border-left"><span class="word-highlight">しか</span><p class="desc">Only. MUST take negative verbs.</p><p class="ex">百円しかありません。</p></div>
+            </div>
+          </div>
+          <div class="trap-card">
+            <div class="trap-card-header"><h4>あります (arimasu) vs います (imasu)</h4></div>
+            <div class="trap-comparison">
+              <div class="comp-col"><span class="word-highlight">あります</span><p class="desc">For non-living / immovable things (trees, books).</p></div>
+              <div class="comp-col border-left"><span class="word-highlight">います</span><p class="desc">For living / moving things (people, animals).</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-25" data-slide-index="25">
+      <div class="slide-header">
+        <div class="slide-badge">Final Review</div>
+        <h2>Last Day Before Exam Revision</h2>
+      </div>
+      <div class="slide-body" style="font-size: 0.9rem;">
+        <p class="slide-desc">Memorize this sheet in the 30 minutes before entering the exam room!</p>
+        <div style="column-count: 2; column-gap: 2rem; background: var(--bg-table-header); padding: 1.5rem; border-radius: 8px;">
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);">CRITICAL GRAMMAR</h4>
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem; color: var(--text-main);">
+            <li style="margin-bottom: 0.3rem;"><strong>〜てください</strong> : Please do</li>
+            <li style="margin-bottom: 0.3rem;"><strong>〜てもいいです</strong> : May I do?</li>
+            <li style="margin-bottom: 0.3rem;"><strong>〜てはいけません</strong> : Must not do</li>
+            <li style="margin-bottom: 0.3rem;"><strong>〜なければなりません</strong> : Must do</li>
+            <li style="margin-bottom: 0.3rem;"><strong>〜たことがあります</strong> : Have experienced</li>
+            <li style="margin-bottom: 0.3rem;"><strong>〜たり〜たりします</strong> : Do things like A and B</li>
+          </ul>
+
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);">TRAP PARTICLES</h4>
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem; color: var(--text-main);">
+            <li style="margin-bottom: 0.3rem;"><strong>[Action Place] で</strong> : (公園で走る)</li>
+            <li style="margin-bottom: 0.3rem;"><strong>[Existence Place] に</strong> : (公園にいる)</li>
+            <li style="margin-bottom: 0.3rem;"><strong>しか ＋ Negative</strong> : Only</li>
+          </ul>
+
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);">ADVERBS</h4>
+          <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem; color: var(--text-main);">
+            <li style="margin-bottom: 0.3rem;"><strong>まだ ＋ Negative</strong> : Not yet</li>
+            <li style="margin-bottom: 0.3rem;"><strong>もう ＋ Past</strong> : Already</li>
+            <li style="margin-bottom: 0.3rem;"><strong>あまり ＋ Negative</strong> : Not very</li>
+            <li style="margin-bottom: 0.3rem;"><strong>ぜんぜん ＋ Negative</strong> : Not at all</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main></div><script>
     document.addEventListener('DOMContentLoaded', () => {
         // Quiz Logic
         // Store scores for test sections

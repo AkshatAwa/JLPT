@@ -467,6 +467,21 @@ def generate_css():
             .sidebar { width: 230px; }
             .main-content { margin-left: 230px; }
         }
+
+        @media (max-width: 768px) {
+            .layout { flex-direction: column; }
+            .sidebar { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+            .sidebar-footer { position: relative; width: 100%; border-top: none; padding-top: 0; }
+            .main-content { margin-left: 0; padding: 20px 15px; }
+            .kanji-grid { grid-template-columns: 1fr; }
+            .kc-header { flex-direction: column; align-items: center; text-align: center; }
+            .kc-char-box { margin-right: 0; margin-bottom: 16px; }
+            .kc-readings { justify-content: center; }
+            .card { padding: 16px; }
+            .grammar-search-grid { grid-template-columns: 1fr; }
+            .table-wrapper { font-size: 13px; }
+            th, td { padding: 8px 10px; }
+        }
     
     @media print {
         .sidebar { display: none; }
@@ -1105,7 +1120,7 @@ def build_test_center():
 
 
 def build_all():
-    html = f'<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Ultimate Japanese Learning Ecosystem</title><style>{generate_css()}</style></head><body>'
+    html = f'<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ultimate Japanese Learning Ecosystem</title><style>{generate_css()}</style></head><body>'
     html += '<div class="layout">'
     html += build_sidebar()
     html += '<main class="main-content">'
