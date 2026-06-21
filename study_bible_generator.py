@@ -182,9 +182,15 @@ def generate_css():
     
     .layout { display: flex; min-height: 100vh; }
     
-    .sidebar { width: var(--sidebar-w); background: var(--surface); border-right: 1px solid var(--border); position: fixed; height: 100vh; overflow-y: auto; padding: 20px 0 60px 0; }
-    .sidebar-title { font-weight: 800; font-size: 16px; color: var(--text-1); padding: 0 20px 20px; border-bottom: 1px solid var(--border); margin-bottom: 10px; }
-    .sidebar-footer { position: fixed; bottom: 0; left: 0; width: var(--sidebar-w); padding: 16px 20px; font-size: 12px; color: var(--text-4); border-top: 1px solid var(--border); background: var(--surface); z-index: 10; text-align: center; }
+    .sidebar { width: var(--sidebar-w); background: var(--surface); border-right: 1px solid var(--border); position: fixed; height: 100vh; display: flex; flex-direction: column; }
+    .sidebar-title { font-weight: 800; font-size: 16px; color: var(--text-1); padding: 20px 20px 20px; border-bottom: 1px solid var(--border); margin-bottom: 10px; flex-shrink: 0; }
+    .sidebar-content { flex: 1; overflow-y: auto; }
+    .sidebar-footer { flex-shrink: 0; padding: 16px 20px; font-size: 12px; color: var(--text-4); border-top: 1px solid var(--border); background: var(--surface); text-align: center; }
+    .sidebar-close { display: none; }
+    
+    .mobile-header { display: none; }
+    .hamburger-btn { background: transparent; border: 0; cursor: pointer; padding: 8px; display: flex; align-items: center; }
+    .sidebar-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999; backdrop-filter: blur(2px); }
     .nav-group-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; background: transparent; border: 0; cursor: pointer; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-4); padding: 10px 20px 6px; font-weight: 700; text-align: left; }
     .nav-group-toggle:hover { background: var(--surface-raised); color: var(--text-1); }
     .nav-group-chevron { font-size: 12px; transition: transform 0.2s; }
@@ -470,8 +476,14 @@ def generate_css():
 
         @media (max-width: 768px) {
             .layout { flex-direction: column; }
-            .sidebar { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
-            .sidebar-footer { position: relative; width: 100%; border-top: none; padding-top: 0; }
+            .mobile-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+            .mobile-title { font-weight: 800; font-size: 14px; color: var(--text-1); }
+            .sidebar { position: fixed; top: 0; left: 0; width: 280px; height: 100vh; display: flex; flex-direction: column; z-index: 1000; transform: translateX(-100%); transition: transform 0.3s ease; border-right: 1px solid var(--border); }
+            .sidebar.open { transform: translateX(0); }
+            .sidebar-overlay { display: none; }
+            .sidebar-overlay.active { display: block; }
+            .sidebar-close { position: absolute; top: 16px; right: 16px; background: var(--surface-raised); border: 0; color: var(--text-1); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1; }
+            .sidebar-footer { position: relative; width: 100%; }
             .main-content { margin-left: 0; padding: 20px 15px; }
             .kanji-grid { grid-template-columns: 1fr; }
             .kc-header { flex-direction: column; align-items: center; text-align: center; }
@@ -496,6 +508,37 @@ def generate_css():
 def generate_js():
     script = """
     document.addEventListener('DOMContentLoaded', () => {
+        // Sidebar Toggle Logic (Mobile)
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const sidebar = document.querySelector('.sidebar');
+        const sidebarClose = document.getElementById('sidebarClose');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        
+        function openSidebar() {
+            sidebar.classList.add('open');
+            sidebarOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            sidebarOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        if (hamburgerBtn) hamburgerBtn.addEventListener('click', openSidebar);
+        if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+        if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
+        
+        // Close sidebar when a nav link is clicked
+        document.querySelectorAll('.sidebar .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    closeSidebar();
+                }
+            });
+        });
+        
         // Quiz Logic
         // Store scores for test sections
         const testScores = {};
@@ -676,7 +719,13 @@ def generate_js():
     return script.replace('__REVISION_LISTS__', json.dumps(REVISION_MODE_LISTS, ensure_ascii=False))
 
 def build_sidebar():
-    html = '<aside class="sidebar"><div class="sidebar-title">JLPT N5 Platform<br><span style="font-size:11px;font-weight:400;color:var(--text-4)">From First Principles</span></div>'
+    html = '<aside class="sidebar">'
+    # Sidebar close button
+    html += '<button class="sidebar-close" id="sidebarClose" aria-label="Close Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>'
+    # Fixed header
+    html += '<div class="sidebar-title">JLPT N5 Platform<br><span style="font-size:11px;font-weight:400;color:var(--text-4)">From First Principles</span></div>'
+    # Scrollable content
+    html += '<div class="sidebar-content">'
     
     html += '<button type="button" class="nav-group-toggle" aria-expanded="true" aria-controls="nav-learning-centers"><span>Learning Centers</span><span class="nav-group-chevron">▾</span></button>'
     html += '<div class="nav-group-links" id="nav-learning-centers">'
@@ -687,18 +736,20 @@ def build_sidebar():
     html += '<a href="#expressions" class="nav-link">Expression Library</a>'
     html += '<a href="#verbs" class="nav-link">Verb Conjugation Center</a>'
     html += '</div>'
-    html += '<button type="button" class="nav-group-toggle" aria-expanded="true" aria-controls="nav-curriculum-lessons"><span>Curriculum Lessons</span><span class="nav-group-chevron">▾</span></button>'
-    html += '<div class="nav-group-links" id="nav-curriculum-lessons">'
+    html += '<button type="button" class="nav-group-toggle" aria-expanded="false" aria-controls="nav-curriculum-lessons"><span>Curriculum Lessons</span><span class="nav-group-chevron">▾</span></button>'
+    html += '<div class="nav-group-links collapsed" id="nav-curriculum-lessons">'
     for l in ALL_LESSONS:
         html += f'<a href="#lesson-{l["num"]}" class="nav-link">Lesson {l["num"]}: {l["title"]}</a>'
     html += '</div>'
     
-    html += '<button type="button" class="nav-group-toggle" aria-expanded="true" aria-controls="nav-test-center"><span>Take Test</span><span class="nav-group-chevron">▾</span></button>'
-    html += '<div class="nav-group-links" id="nav-test-center">'
+    html += '<button type="button" class="nav-group-toggle" aria-expanded="false" aria-controls="nav-test-center"><span>Take Test</span><span class="nav-group-chevron">▾</span></button>'
+    html += '<div class="nav-group-links collapsed" id="nav-test-center">'
     for t in N5_TESTS:
         html += f'<a href="#test-{t["id"]}" class="nav-link">{t["title"]}</a>'
     html += '</div>'
     
+    html += '</div>'
+    # Fixed footer
     html += '<div class="sidebar-footer">Made with ❤️ by Akshat Awasthi</div>'
         
     html += '</aside>'
@@ -1121,6 +1172,10 @@ def build_test_center():
 
 def build_all():
     html = f'<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ultimate Japanese Learning Ecosystem</title><style>{generate_css()}</style></head><body>'
+    # Mobile sidebar overlay
+    html += '<div class="sidebar-overlay" id="sidebarOverlay"></div>'
+    # Mobile header with hamburger
+    html += '<header class="mobile-header"><button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button><div class="mobile-title">JLPT N5 Platform</div><div style="width: 32px;"></div></header>'
     html += '<div class="layout">'
     html += build_sidebar()
     html += '<main class="main-content">'
